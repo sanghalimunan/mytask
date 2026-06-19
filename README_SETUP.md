@@ -80,3 +80,10 @@ Nota:
 - Jangan letak slash `/` di hujung.
 - `mytask-arkideska.vercel.app` ialah production domain yang lebih stabil.
 - URL yang ada kod panjang seperti `e5xrvx05o` biasanya preview/deployment URL dan boleh berubah.
+
+## v1.3 Import Fixed
+
+- Fixed import JSON daripada versi Apps Script / Google Sheet.
+- Import sekarang merge task terus ke Google Drive JSON database.
+- Settings/category daripada backup turut boleh dibawa masuk.
+- Apps Script tidak digunakan.
