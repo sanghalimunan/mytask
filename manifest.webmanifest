@@ -4,6 +4,5 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#111112",
-  "theme_color": "#111112",
-  "description": "Task planner by arkideSKa with Google Drive storage."
+  "theme_color": "#111112"
 }

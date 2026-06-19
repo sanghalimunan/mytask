@@ -190,7 +190,7 @@
 const defaultSettings={appName:"MyTaSK",categories:["General","PdP / Kelas","CCMS / Peperiksaan","Website Kolej","HLP / PhD / UPM","KPI / Laporan","Meeting","Personal"],colorLabels:{c1:"Lime",c2:"Orange",c3:"Purple",c4:"Green",c5:"Beige",c6:"Red",c7:"Blue",c8:"Pink",c9:"Yellow",c10:"Grey"}};const monthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];const shortMonths=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];const dayNames=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];const calendarDayNames=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];const colors=["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"];let tasks=[];let appSettings=JSON.parse(JSON.stringify(defaultSettings));let selectedDate=toISO(new Date());let calendarMonth=new Date();let view="today";let openIds=new Set();let saveTimers={};let isSignedIn=false;let draggedId=null;
 const MYTASK_CONFIG = {
   // WAJIB GANTI: Google OAuth Web Client ID dari Google Cloud Console
-  CLIENT_ID: "472270716031-uihmn2f04to3lmqk1is0r76a876723ir.apps.googleusercontent.com",
+  CLIENT_ID: "472270716031-uihmn2f04to3lmqk1is0r76a876723ir.apps.googleusercontent.com", // MyTaSK OAuth Client ID
   DISCOVERY_DOC: "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest",
   SCOPES: "https://www.googleapis.com/auth/drive.file",
   DB_FILE_NAME: "MyTaSK Database.json"
@@ -204,8 +204,8 @@ let googleUserEmail = "";
 
 function isClientIdReady(){
   return MYTASK_CONFIG.CLIENT_ID &&
-    !MYTASK_CONFIG.CLIENT_ID.includes("472270716031-uihmn2f04to3lmqk1is0r76a876723ir.apps.googleusercontent.com") &&
-    MYTASK_CONFIG.CLIENT_ID.includes("472270716031-uihmn2f04to3lmqk1is0r76a876723ir.apps.googleusercontent.com");
+    MYTASK_CONFIG.CLIENT_ID.includes(".apps.googleusercontent.com") &&
+    MYTASK_CONFIG.CLIENT_ID.length > 30;
 }
 
 function showConfigError(){

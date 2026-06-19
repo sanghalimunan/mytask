@@ -67,3 +67,16 @@ Contoh:
 OAuth scope `drive.file` membenarkan app access fail yang dicipta/dibuka oleh app sahaja. Ia lebih sesuai daripada scope Drive penuh.
 
 Kalau app mahu digunakan ramai orang awam, Google mungkin perlukan OAuth consent verification sebelum app nampak benar-benar professional.
+
+
+## OAuth origins untuk projek ini
+
+Masukkan origins ini dalam Google Cloud Console > OAuth Client ID > Authorized JavaScript origins:
+
+- https://mytask-arkideska.vercel.app
+- https://mytask-arkideska-e5xrvx05o-arkideska.vercel.app
+
+Nota:
+- Jangan letak slash `/` di hujung.
+- `mytask-arkideska.vercel.app` ialah production domain yang lebih stabil.
+- URL yang ada kod panjang seperti `e5xrvx05o` biasanya preview/deployment URL dan boleh berubah.
