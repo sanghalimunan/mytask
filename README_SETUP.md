@@ -87,3 +87,11 @@ Nota:
 - Import sekarang merge task terus ke Google Drive JSON database.
 - Settings/category daripada backup turut boleh dibawa masuk.
 - Apps Script tidak digunakan.
+
+## v1.4 Undo + Auto Login
+
+- Tambah button Undo pada mobile header dan desktop actions.
+- Undo menyokong add/edit/delete/toggle done/import/clear completed/settings.
+- Selepas login berjaya, app simpan flag auto-login dalam browser.
+- Bila app dibuka semula, MyTaSK cuba reconnect Google secara senyap.
+- Nota: OAuth browser tidak memberi refresh token kekal. Jika sesi Google tamat, browser block cookies, incognito, atau permission reset, user masih perlu klik Sign in semula.
