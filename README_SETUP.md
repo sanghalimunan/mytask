@@ -95,3 +95,26 @@ Nota:
 - Selepas login berjaya, app simpan flag auto-login dalam browser.
 - Bila app dibuka semula, MyTaSK cuba reconnect Google secara senyap.
 - Nota: OAuth browser tidak memberi refresh token kekal. Jika sesi Google tamat, browser block cookies, incognito, atau permission reset, user masih perlu klik Sign in semula.
+
+## v1.5 AI Text Planner
+
+- Tambah panel AI Planner.
+- User boleh taip arahan kerja dalam ayat biasa.
+- AI pulangkan task, due date, category, priority dan note.
+- User perlu review dan klik `Apply to Calendar`.
+- Tambah Vercel API route `/api/ai-plan-task`.
+- Letakkan API key sebagai Environment Variable di Vercel: `OPENAI_API_KEY`.
+- Optional model override: `OPENAI_MODEL`.
+- Jika `OPENAI_API_KEY` belum diset, app guna fallback planner ringkas.
+
+## v1.6 ChatGPT Import Automate
+
+- Tambah modal `Import from ChatGPT`.
+- Boleh paste JSON terus daripada ChatGPT.
+- Ada button `Paste from Clipboard`.
+- Tidak perlu upload fail JSON secara manual.
+- Sokong format:
+  - `{"tasks":[...]}`
+  - `[...]`
+  - fenced code block ```json ... ```
+- Task terus apply ke calendar dan save ke Google Drive.

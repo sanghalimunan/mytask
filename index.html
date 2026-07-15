@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ms"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/><title>MyTaSK Vercel Edition v1.4 v1.3</title><style>
+<!DOCTYPE html><html lang="ms"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/><title>MyTaSK Vercel Edition v1.6 v1.3</title><style>
 :root{--bg:#111112;--panel:#1c1c1f;--panel-2:#242428;--text:#f5f5f6;--muted:#a5a5ad;--line:#38383f;--accent:#8b5cf6;--cyan:#00c2ff;--pink:#ff2ab3;--green:#b6e35a;--orange:#ff9a66;--purple:#b399ff;--red:#ff4e6a;--blue:#66a6ff;--yellow:#ffd86b;--grey:#bfc2c7;--shadow:0 24px 60px rgba(0,0,0,.35)}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(139,92,246,.25),transparent 34%),radial-gradient(circle at bottom right,rgba(0,194,255,.14),transparent 34%),var(--bg);min-height:100vh;overscroll-behavior-x:none}button,input,textarea,select{font-family:Arial,Helvetica,sans-serif}.app-shell{width:min(1500px,100%);margin:0 auto;padding:24px;display:grid;grid-template-columns:minmax(390px,520px) 1fr;gap:24px;min-height:100vh;align-items:start}.app-frame{width:100%;margin:0 auto;background:#0b0b0d;border:10px solid #202024;border-radius:44px;box-shadow:var(--shadow);overflow:hidden;position:sticky;top:24px;min-height:820px}.brand-mark{font-family:'Century Gothic','CenturyGothic',Arial,sans-serif;letter-spacing:3px;font-weight:400;text-transform:none}.statusbar{height:34px;background:var(--accent);display:flex;justify-content:space-between;align-items:center;padding:0 24px;font-size:13px;font-weight:800}.screen{background:var(--panel);min-height:786px;position:relative;overflow:hidden}.auth-screen{position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(0,194,255,.18),transparent 32%),radial-gradient(circle at 90% 90%,rgba(255,42,179,.18),transparent 32%),#1c1c1f;z-index:100;display:grid;place-items:center;padding:28px;text-align:center}.auth-screen.hidden{display:none}.auth-card{width:100%;max-width:420px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);border-radius:30px;padding:28px 22px;box-shadow:var(--shadow)}.auth-logo{width:72px;height:72px;border-radius:24px;margin:0 auto 18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--cyan));font-size:24px;font-weight:900}.auth-card h1{font-size:30px;margin:0 0 10px}.auth-card p{color:var(--muted);line-height:1.55;font-size:14px;margin:0 0 18px}.google-btn{width:100%;border:0;border-radius:18px;background:white;color:#111;padding:14px 16px;font-size:15px;font-weight:900;cursor:pointer}.auth-error{margin-top:14px;color:#ff9bad;font-size:13px;line-height:1.45;display:none}.auth-error.show{display:block}.header{padding:18px 18px 12px;background:#202023;border-bottom:1px solid var(--line)}.top-row{display:flex;justify-content:space-between;align-items:start;gap:12px}.title-block small{display:block;color:var(--muted);font-size:12px;margin-bottom:3px}h1{margin:0;font-size:26px;letter-spacing:-.8px;line-height:1.05}.icon-row{display:flex;gap:7px}.icon-btn{width:40px;height:40px;border-radius:15px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);display:grid;place-items:center;cursor:pointer;font-size:17px}.sync-dot{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:11px;margin-top:7px;font-weight:800}.sync-dot:before{content:"";width:8px;height:8px;border-radius:99px;background:#3ddc84;display:inline-block}.sync-dot.saving:before{background:var(--orange)}.sync-dot.error:before{background:var(--red)}.date-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:12px}.date-pill{padding:7px 2px;border-radius:14px;text-align:center;color:var(--muted);background:#2a2a2f;border:1px solid transparent;cursor:pointer;transition:.18s ease}.date-pill.active{background:#f7f7f7;color:#111}.date-pill .dow{font-size:9px;font-weight:800;text-transform:uppercase;opacity:.75}.date-pill .num{font-size:14px;font-weight:900;margin-top:2px}.calendar-drop{display:none;padding:12px;background:#19191d;border-bottom:1px solid var(--line);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.calendar-drop.open{display:flex;gap:10px}.calendar-drop::-webkit-scrollbar{height:6px}.calendar-drop::-webkit-scrollbar-thumb{background:#3a3a44;border-radius:999px}.month-card{min-width:min(100%,390px);scroll-snap-align:center;background:#202026;border:1px solid #33333a;border-radius:20px;padding:10px}.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:10px}.cal-title{font-weight:900;font-size:13px}.mini-btn{padding:6px 8px;border-radius:10px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);cursor:pointer;font-weight:800;font-size:11px}.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.cal-day-name{font-size:9px;color:var(--muted);text-align:center;font-weight:900;padding-bottom:2px}.cal-day{aspect-ratio:1/1;border-radius:9px;background:#25252a;display:grid;place-items:center;font-size:11px;color:var(--muted);cursor:pointer;position:relative;border:1px solid transparent}.cal-day.other{opacity:.22}.cal-day.today{border-color:var(--cyan);color:var(--cyan)}.cal-day.selected{background:var(--accent);color:white}.cal-dot{position:absolute;bottom:3px;width:4px;height:4px;border-radius:99px;background:var(--pink)}.quick-add{display:grid;grid-template-columns:1fr 42px;gap:8px;padding:12px 16px;background:#1a1a1e;border-bottom:1px solid var(--line)}.quick-add input{border:1px solid var(--line);background:#2a2a30;color:var(--text);border-radius:15px;padding:11px 13px;outline:none;font-size:13px}.add-btn{width:42px;height:42px;border-radius:99px;border:0;background:var(--cyan);color:white;font-size:24px;cursor:pointer;display:grid;place-items:center;line-height:1}.task-area{padding:0 0 76px;max-height:596px;overflow-y:auto;scroll-behavior:smooth}.section-label{padding:7px 16px;font-size:12px;font-weight:900;text-align:center;color:white;position:sticky;top:0;z-index:2}.today-label{background:var(--cyan)}.tomorrow-label{background:var(--accent)}.overdue-label{background:var(--pink)}.upcoming-label{background:#3c3c44}.task-group{padding:10px 12px 12px;display:grid;gap:7px}.task-card{border-radius:16px;overflow:hidden;background:var(--panel-2);border:1px solid #34343b;touch-action:pan-y;transition:transform .12s ease,opacity .12s ease}.task-card.open{border-color:rgba(255,255,255,.16)}.task-card.dragging{opacity:.55;transform:scale(.98);border:1px dashed white}.task-main{width:100%;border:0;padding:9px 10px;display:grid;grid-template-columns:42px 24px 1fr 48px 22px;gap:8px;align-items:center;text-align:left;color:#111;cursor:pointer;border-radius:0;background:var(--green);min-height:48px}.task-main.c1{background:var(--green)}.task-main.c2{background:var(--orange)}.task-main.c3{background:var(--purple)}.task-main.c4{background:#32c28a}.task-main.c5{background:#e6c196}.task-main.c6{background:#f34f6b;color:white}.task-main.c7{background:var(--blue)}.task-main.c8{background:#ff8bd1}.task-main.c9{background:var(--yellow)}.task-main.c10{background:var(--grey)}.task-main.done{opacity:.55}.date-box{width:38px;min-height:34px;display:grid;place-items:center;text-align:center;line-height:1;color:inherit;background:transparent;border:0}.date-box .d{display:block;font-size:22px;font-weight:900;letter-spacing:-1px}.date-box .m{display:block;font-size:8px;font-weight:900;text-transform:uppercase;margin-top:2px;opacity:.72}.check{width:23px;height:23px;border-radius:8px;border:2px solid rgba(0,0,0,.22);background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:15px;font-weight:900;cursor:pointer;color:inherit}.task-title{display:block;font-weight:900;font-size:13px;line-height:1.15;word-break:break-word}.task-title.done{text-decoration:line-through;opacity:.65}.task-meta{display:block;font-size:9.5px;margin-top:7px;opacity:.72;font-weight:800}.plus-mini{width:22px;height:22px;border-radius:99px;background:rgba(0,0,0,.15);display:grid;place-items:center;font-size:15px;font-weight:400}.task-detail{display:none;padding:10px;background:#25252a;border-top:1px solid rgba(255,255,255,.08)}.task-card.open .task-detail{display:block}.detail-form{display:grid;gap:8px}.detail-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.detail-form label{color:var(--muted);font-size:10px;font-weight:900;display:block;margin-bottom:4px}.detail-form input,.detail-form select,.detail-form textarea{width:100%;border:1px solid var(--line);background:#1c1c20;color:var(--text);border-radius:12px;padding:9px 10px;outline:none;font-size:12px}.detail-form textarea{min-height:64px;resize:vertical}.detail-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:2px}.small-action{border:1px solid var(--line);background:#33333a;color:var(--text);border-radius:11px;padding:8px 10px;font-size:11px;cursor:pointer}.small-action.danger{background:rgba(255,78,106,.14);color:#ff8fa1;border-color:rgba(255,78,106,.25)}.empty{color:var(--muted);text-align:center;padding:18px;border:1px dashed var(--line);border-radius:16px;line-height:1.45;background:rgba(255,255,255,.03);font-size:13px}.floating-footer{position:absolute;left:0;right:0;bottom:0;padding:14px 16px 16px;background:linear-gradient(transparent,rgba(28,28,31,.95) 30%,#1c1c1f 100%);pointer-events:none}.footer-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:#111114;border:1px solid #303038;padding:6px;border-radius:20px;pointer-events:auto}.tab{border:0;background:transparent;color:var(--muted);border-radius:15px;padding:8px 4px;cursor:pointer;font-size:10.5px;font-weight:900}.tab.active{color:#111;background:white}.desktop-panel{display:grid;gap:18px}.side-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);border-radius:28px;padding:22px;box-shadow:var(--shadow)}.side-card h2{margin:0 0 8px;font-size:24px;letter-spacing:-.6px}.side-card p{color:var(--muted);line-height:1.6;margin:0;font-size:14px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);padding:15px;border-radius:20px}.stat-num{font-size:28px;font-weight:900;color:white}.stat-label{color:var(--muted);font-size:12px;margin-top:4px;font-weight:800}.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.setting-field label{display:block;color:var(--muted);font-size:12px;font-weight:900;margin-bottom:6px}.setting-field input,.setting-field select,.setting-field textarea{width:100%;background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px;outline:none}.setting-field textarea{min-height:100px;resize:vertical}.setting-field select option,.detail-form select option{background:#222;color:white}.side-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.side-actions button{border:0;border-radius:16px;padding:12px 14px;cursor:pointer;font-weight:900}.primary-side{background:var(--accent);color:white}.soft-side{background:rgba(255,255,255,.1);color:white}.danger-side{background:rgba(255,78,106,.18);color:#ff9bad}a.db-link{color:var(--cyan);font-weight:900;text-decoration:none}.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{width:min(720px,100%);max-height:90vh;overflow-y:auto;background:#1d1d22;border:1px solid rgba(255,255,255,.12);border-radius:28px;box-shadow:var(--shadow);padding:22px}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:start;margin-bottom:16px}.modal h2{margin:0;font-size:24px}.modal p{margin:6px 0 0;color:var(--muted);line-height:1.5;font-size:14px}.close-btn{width:38px;height:38px;border-radius:14px;border:1px solid var(--line);background:#2a2a30;color:white;cursor:pointer;font-size:20px}@media(min-width:981px){.app-frame.web-mode{max-width:none;border-radius:28px;border-width:1px;min-height:calc(100vh - 48px)}.app-frame.web-mode .screen{min-height:calc(100vh - 84px)}.app-frame.web-mode .task-area{max-height:calc(100vh - 292px)}}@media(max-width:980px){.app-shell{grid-template-columns:1fr;padding:14px}.app-frame{position:relative;top:auto;max-width:560px}.desktop-panel{order:-1}}@media(max-width:560px){.app-shell{padding:0}.app-frame{border:0;border-radius:0;max-width:none;min-height:100vh}.screen{min-height:calc(100vh - 34px)}.desktop-panel{display:none}.statusbar{border-radius:0}.detail-row{grid-template-columns:1fr}.task-area{max-height:calc(100vh - 232px)}.month-card{min-width:92vw}}
 .web-calendar-card{display:none}.web-topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}.web-brand h1{font-size:36px;margin:0;letter-spacing:-1px}.web-brand .brand-small{font-family:'Century Gothic','CenturyGothic',Arial,sans-serif;letter-spacing:4px;color:var(--muted);font-size:12px;margin-top:4px}.web-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.web-actions input,.web-actions select{background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:12px;outline:none}.web-actions select option{background:#222;color:white}.web-calendar-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:16px 0 12px}.web-calendar-title{font-size:24px;font-weight:900}.web-calendar-controls{display:flex;gap:8px}.web-calendar-controls button,.web-add-btn{border:0;border-radius:14px;padding:11px 14px;font-weight:900;cursor:pointer}.web-calendar-controls button{background:rgba(255,255,255,.1);color:white}.web-add-btn{background:var(--cyan);color:white}.web-calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.web-day-name{font-size:12px;font-weight:900;color:var(--muted);text-align:center;padding:7px 4px}.web-day-cell{min-height:142px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:8px;overflow:hidden}.web-day-cell.other{opacity:.35}.web-day-cell.today{border-color:var(--cyan);box-shadow:0 0 0 2px rgba(0,194,255,.12)}.web-day-cell.selected{border-color:var(--accent)}.web-day-num{font-weight:900;font-size:14px;margin-bottom:7px;display:flex;justify-content:space-between}.web-task-list{display:grid;gap:5px}.web-task-chip{border:0;width:100%;text-align:left;border-radius:10px;padding:6px 7px;color:#111;cursor:pointer;display:grid;grid-template-columns:auto 1fr;gap:5px;align-items:center;font-size:11px;font-weight:900;line-height:1.15;min-height:28px}.web-task-chip.done{opacity:.55;text-decoration:line-through}.web-task-chip.c1{background:var(--green)}.web-task-chip.c2{background:var(--orange)}.web-task-chip.c3{background:var(--purple)}.web-task-chip.c4{background:#32c28a}.web-task-chip.c5{background:#e6c196}.web-task-chip.c6{background:#f34f6b;color:white}.web-task-chip.c7{background:var(--blue)}.web-task-chip.c8{background:#ff8bd1}.web-task-chip.c9{background:var(--yellow)}.web-task-chip.c10{background:var(--grey)}.web-task-date{font-size:10px;opacity:.7}.web-more{font-size:11px;color:var(--muted);font-weight:900;padding:3px 2px}.web-empty-auth{padding:24px;border:1px dashed rgba(255,255,255,.16);border-radius:22px;color:var(--muted);text-align:center}.web-empty-auth button{margin-top:12px;border:0;background:white;color:#111;border-radius:16px;padding:12px 16px;font-weight:900;cursor:pointer}.web-task-list-panel{margin-top:18px}.web-task-list-panel h2{margin:0 0 10px;font-size:20px}.web-selected-tasks{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}.web-selected-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:12px}.web-selected-card strong{display:block;margin-bottom:7px}.web-selected-card small{color:var(--muted);font-weight:900}.web-selected-actions{display:flex;gap:7px;margin-top:10px}.web-selected-actions button{border:0;border-radius:12px;padding:8px 10px;font-size:11px;font-weight:900;cursor:pointer;background:rgba(255,255,255,.1);color:white}.web-selected-actions button:first-child{background:var(--cyan);color:white}@media (min-width:981px){.app-shell{display:block;max-width:1500px;padding:28px}.app-frame{display:none}.desktop-panel{display:block}.web-calendar-card{display:block;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);border-radius:30px;padding:24px;box-shadow:var(--shadow);margin-bottom:18px}.side-card{margin-bottom:18px}}@media (max-width:980px){.web-calendar-card{display:none!important}}
 @media (min-width:981px){
@@ -168,11 +168,51 @@
   box-shadow:inset 0 -1px 0 rgba(0,0,0,.14);
 }
 
+
+/* v1.5 AI Planner */
+.ai-planner-card{background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(0,194,255,.08)),rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:28px;padding:20px;box-shadow:var(--shadow)}
+.ai-planner-card h2{margin:0 0 8px;font-size:24px;letter-spacing:-.6px}
+.ai-planner-card p{color:var(--muted);line-height:1.55;margin:0 0 14px;font-size:14px}
+.ai-planner-box{display:grid;gap:10px}
+.ai-planner-box textarea,.ai-modal-grid textarea{width:100%;min-height:115px;resize:vertical;background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:14px;outline:none;line-height:1.45}
+.ai-planner-actions{display:flex;gap:10px;flex-wrap:wrap}
+.ai-planner-actions button{border:0;border-radius:16px;padding:12px 14px;cursor:pointer;font-weight:900}
+.ai-plan-primary{background:var(--cyan);color:white}.ai-plan-soft{background:rgba(255,255,255,.1);color:white}
+.ai-plan-list{display:grid;gap:8px;margin-top:12px}
+.ai-plan-item{background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:11px}
+.ai-plan-item strong{display:block;font-size:13px;margin-bottom:5px}
+.ai-plan-item small{display:block;color:var(--muted);font-weight:800;line-height:1.45}
+.ai-plan-status{color:var(--muted);font-size:12px;font-weight:800}.ai-mobile-open{font-size:15px}.ai-modal-grid{display:grid;gap:12px}
+
+
+/* v1.6 ChatGPT Import */
+.chatgpt-import-box{display:grid;gap:10px;margin-top:10px}
+.chatgpt-import-box textarea{width:100%;min-height:130px;resize:vertical;background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:14px;outline:none;line-height:1.45;font-size:13px}
+.chatgpt-import-status{color:var(--muted);font-size:12px;font-weight:800;line-height:1.45}
+.chatgpt-import-actions{display:flex;gap:10px;flex-wrap:wrap}
+.chatgpt-import-actions button{border:0;border-radius:16px;padding:12px 14px;cursor:pointer;font-weight:900}
+.chatgpt-primary{background:var(--cyan);color:white}.chatgpt-soft{background:rgba(255,255,255,.1);color:white}
+
 </style>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://apis.google.com/js/api.js"></script>
 <link rel="manifest" href="/manifest.webmanifest">
-</head><body><main class="app-shell"><section class="app-frame web-mode"><div class="statusbar"><span id="clock">12:00</span><span class="brand-mark">a r k i d e S K a</span></div><div class="screen"><div class="auth-screen" id="authScreen"><div class="auth-card"><div class="auth-logo">MT</div><h1>MyTaSK</h1><p>Sign in dengan Google untuk simpan task dalam Google Drive anda dan sync di semua device.</p><button class="google-btn" id="googleLoginBtn" onclick="loginWithGoogle()">Sign in with Google</button><div class="auth-error" id="authError"></div></div></div><div class="header"><div class="top-row"><div class="title-block"><small id="todayText">Today</small><h1 id="appTitle">MyTaSK</h1><div class="sync-dot" id="syncStatus">Not signed in</div></div><div class="icon-row"><button class="icon-btn" onclick="undoLastAction()" title="Undo">↶</button><button class="icon-btn" onclick="toggleCalendar()" title="Calendar View">▦</button><button class="icon-btn" onclick="openSettings()" title="Settings">⚙</button></div></div><div class="date-strip" id="dateStrip"></div></div><div class="calendar-drop" id="calendarDrop"></div><form class="quick-add" onsubmit="addTask(event)"><input id="quickTaskTitle" placeholder="Type new task here..." autocomplete="off"/><button class="add-btn" type="submit">+</button></form><div class="task-area" id="taskArea"></div><div class="floating-footer"><div class="footer-bar"><button class="tab active" id="tabToday" onclick="setView('today')">Today</button><button class="tab" id="tabWeek" onclick="setView('week')">Week</button><button class="tab" id="tabMonth" onclick="setView('month')">Month</button><button class="tab" id="tabAll" onclick="setView('all')">All</button></div></div></div></section><aside class="desktop-panel"><div class="web-calendar-card" id="webCalendarCard"><div class="web-topbar"><div class="web-brand"><h1>MyTaSK</h1><div class="brand-small">a r k i d e S K a</div></div><div class="web-actions"><input id="webQuickTaskTitle" placeholder="Type new task here..." onkeydown="if(event.key==='Enter'){event.preventDefault();addWebTask();}"/><select id="webDefaultCategory"></select><button class="web-add-btn" onclick="addWebTask()">+ Add Task</button></div></div><div id="webAuthBox" class="web-empty-auth">Sign in dengan Google untuk buka paparan web calendar.<br><button onclick="loginWithGoogle()">Sign in with Google</button></div><div id="webCalendarContent" style="display:none;"><div class="web-calendar-head"><div class="web-calendar-title" id="webCalendarTitle">Month Year</div><div class="web-calendar-controls"><button onclick="moveWebMonth(-1)">← Month</button><button onclick="selectToday()">Today</button><button onclick="moveWebMonth(1)">Month →</button></div></div><div class="web-calendar-grid" id="webCalendarGrid"></div><div class="web-task-list-panel"><h2 id="webSelectedTitle">Selected Date</h2><div class="web-selected-tasks" id="webSelectedTasks"></div></div></div></div><div class="side-card sync-card"><h2>MyTaSK Sync</h2><p>Data disimpan dalam Google Drive sebagai fail JSON peribadi. Warna card auto ikut Category. Calendar boleh scroll kiri/kanan. Long press task untuk reorder. Swipe kanan untuk finish / COMPLETED, swipe kiri untuk move today bila overdue.</p><p style="margin-top:10px;">Account: <strong id="userEmail">Not signed in</strong><br>Database: <a class="db-link" id="dbLink" href="#" target="_blank">Open Google Drive File</a></p><div class="stats"><div class="stat"><div class="stat-num" id="statTotal">0</div><div class="stat-label">Total</div></div><div class="stat"><div class="stat-num" id="statDone">0</div><div class="stat-label">Done</div></div><div class="stat"><div class="stat-num" id="statToday">0</div><div class="stat-label">Today</div></div><div class="stat"><div class="stat-num" id="statOVERDUE">0</div><div class="stat-label">OVERDUE</div></div></div></div><div class="side-card settings-card"><h2>Settings & Filter</h2><p>Filter kategori, cari task, edit dropdown item dan backup.</p><div class="settings-grid"><div class="setting-field"><label>Default Category</label><select id="defaultCategory"></select></div><div class="setting-field"><label>Filter Category</label><select id="filterCategory" onchange="render()"></select></div><div class="setting-field" style="grid-column:1/-1;"><label>Search</label><input id="searchTask" placeholder="Search task..." oninput="render()"/></div></div><div class="side-actions"><button class="primary-side" onclick="focusInput()">+ Add Task</button><button class="soft-side" onclick="undoLastAction()">Undo</button><button class="soft-side" onclick="openSettings()">Edit Dropdown</button><button class="soft-side" onclick="reloadFromSheet()">Reload</button><button class="soft-side" onclick="exportData()">Export</button><button class="soft-side" onclick="document.getElementById('importFile').click()">Import</button><button class="danger-side" onclick="clearCompleted()">Clear Done</button><input id="importFile" type="file" accept=".json" hidden onchange="importData(event)"/></div></div></aside></main>
+</head><body><main class="app-shell"><section class="app-frame web-mode"><div class="statusbar"><span id="clock">12:00</span><span class="brand-mark">a r k i d e S K a</span></div><div class="screen"><div class="auth-screen" id="authScreen"><div class="auth-card"><div class="auth-logo">MT</div><h1>MyTaSK</h1><p>Sign in dengan Google untuk simpan task dalam Google Drive anda dan sync di semua device.</p><button class="google-btn" id="googleLoginBtn" onclick="loginWithGoogle()">Sign in with Google</button><div class="auth-error" id="authError"></div></div></div><div class="header"><div class="top-row"><div class="title-block"><small id="todayText">Today</small><h1 id="appTitle">MyTaSK</h1><div class="sync-dot" id="syncStatus">Not signed in</div></div><div class="icon-row"><button class="icon-btn" onclick="undoLastAction()" title="Undo">↶</button><button class="icon-btn ai-mobile-open" onclick="openAIPlanner()" title="AI Planner">🤖</button><button class="icon-btn" onclick="toggleCalendar()" title="Calendar View">▦</button><button class="icon-btn" onclick="openSettings()" title="Settings">⚙</button></div></div><div class="date-strip" id="dateStrip"></div></div><div class="calendar-drop" id="calendarDrop"></div><form class="quick-add" onsubmit="addTask(event)"><input id="quickTaskTitle" placeholder="Type new task here..." autocomplete="off"/><button class="add-btn" type="submit">+</button></form><div class="task-area" id="taskArea"></div><div class="floating-footer"><div class="footer-bar"><button class="tab active" id="tabToday" onclick="setView('today')">Today</button><button class="tab" id="tabWeek" onclick="setView('week')">Week</button><button class="tab" id="tabMonth" onclick="setView('month')">Month</button><button class="tab" id="tabAll" onclick="setView('all')">All</button></div></div></div></section><aside class="desktop-panel"><div class="web-calendar-card" id="webCalendarCard"><div class="web-topbar"><div class="web-brand"><h1>MyTaSK</h1><div class="brand-small">a r k i d e S K a</div></div><div class="web-actions"><input id="webQuickTaskTitle" placeholder="Type new task here..." onkeydown="if(event.key==='Enter'){event.preventDefault();addWebTask();}"/><select id="webDefaultCategory"></select><button class="web-add-btn" onclick="addWebTask()">+ Add Task</button></div></div><div id="webAuthBox" class="web-empty-auth">Sign in dengan Google untuk buka paparan web calendar.<br><button onclick="loginWithGoogle()">Sign in with Google</button></div><div id="webCalendarContent" style="display:none;"><div class="web-calendar-head"><div class="web-calendar-title" id="webCalendarTitle">Month Year</div><div class="web-calendar-controls"><button onclick="moveWebMonth(-1)">← Month</button><button onclick="selectToday()">Today</button><button onclick="moveWebMonth(1)">Month →</button></div></div><div class="web-calendar-grid" id="webCalendarGrid"></div><div class="web-task-list-panel"><h2 id="webSelectedTitle">Selected Date</h2><div class="web-selected-tasks" id="webSelectedTasks"></div></div></div></div><div class="side-card sync-card"><h2>MyTaSK Sync</h2><p>Data disimpan dalam Google Drive sebagai fail JSON peribadi. Warna card auto ikut Category. Calendar boleh scroll kiri/kanan. Long press task untuk reorder. Swipe kanan untuk finish / COMPLETED, swipe kiri untuk move today bila overdue.</p><p style="margin-top:10px;">Account: <strong id="userEmail">Not signed in</strong><br>Database: <a class="db-link" id="dbLink" href="#" target="_blank">Open Google Drive File</a></p><div class="stats"><div class="stat"><div class="stat-num" id="statTotal">0</div><div class="stat-label">Total</div></div><div class="stat"><div class="stat-num" id="statDone">0</div><div class="stat-label">Done</div></div><div class="stat"><div class="stat-num" id="statToday">0</div><div class="stat-label">Today</div></div><div class="stat"><div class="stat-num" id="statOVERDUE">0</div><div class="stat-label">OVERDUE</div></div></div></div>
+<div class="side-card ai-planner-card">
+  <h2>🤖 AI Planner</h2>
+  <p>Ceritakan kerja kau dalam ayat biasa. AI akan pecahkan kepada task, cadang due date, kategori dan susun ikut priority.</p>
+  <div class="ai-planner-box">
+    <textarea id="aiInstruction" placeholder="Contoh: Minggu ni aku kena siapkan slide shading, update website kolej, submit laporan KPI Jumaat, dan sambung draft tesis chapter 2. Susun ikut priority."></textarea>
+    <div class="ai-planner-actions">
+      <button class="ai-plan-primary" onclick="generateAIPlan()">Generate Plan</button>
+      <button class="ai-plan-soft" onclick="applyAIPlan()">Apply to Calendar</button>
+      <button class="ai-plan-soft" onclick="clearAIPlan()">Clear</button><button class="ai-plan-soft" onclick="openChatGPTImport()">Import from ChatGPT</button>
+    </div>
+    <div class="ai-plan-status" id="aiPlanStatus">AI Planner ready.</div>
+    <div class="ai-plan-list" id="aiPlanPreview"></div>
+  </div>
+</div>
+<div class="side-card settings-card"><h2>Settings & Filter</h2><p>Filter kategori, cari task, edit dropdown item dan backup.</p><div class="settings-grid"><div class="setting-field"><label>Default Category</label><select id="defaultCategory"></select></div><div class="setting-field"><label>Filter Category</label><select id="filterCategory" onchange="render()"></select></div><div class="setting-field" style="grid-column:1/-1;"><label>Search</label><input id="searchTask" placeholder="Search task..." oninput="render()"/></div></div><div class="side-actions"><button class="primary-side" onclick="focusInput()">+ Add Task</button><button class="soft-side" onclick="undoLastAction()">Undo</button><button class="soft-side" onclick="openSettings()">Edit Dropdown</button><button class="soft-side" onclick="reloadFromSheet()">Reload</button><button class="soft-side" onclick="exportData()">Export</button><button class="soft-side" onclick="document.getElementById('importFile').click()">Import</button><button class="danger-side" onclick="clearCompleted()">Clear Done</button><input id="importFile" type="file" accept=".json" hidden onchange="importData(event)"/></div></div></aside></main>
   <div class="web-detail-modal" id="webTaskModal">
     <div class="web-detail-card">
       <div class="web-detail-head">
@@ -186,7 +226,49 @@
     </div>
   </div>
 
-  <div class="modal-backdrop" id="settingsModal"><div class="modal"><div class="modal-head"><div><h2>MyTaSK Settings</h2><p>Edit item dropdown. Warna card kini auto-generate ikut Category menggunakan vibrant hue colours dan boleh support lebih 20 warna tanpa setting manual.</p></div><button class="close-btn" onclick="closeSettings()">×</button></div><div class="settings-grid"><div class="setting-field" style="grid-column:1/-1;"><label>Category Dropdown</label><textarea id="settingsCategories"></textarea></div></div><div class="side-actions"><button class="primary-side" onclick="saveSettingsFromModal()">Save Settings</button><button class="soft-side" onclick="resetDefaultSettings()">Reset Default</button><button class="danger-side" onclick="closeSettings()">Cancel</button></div></div></div><script>
+  
+
+<div class="modal-backdrop" id="chatGPTImportModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h2>Import from ChatGPT</h2>
+        <p>Copy JSON task daripada ChatGPT, paste di sini, kemudian apply terus ke MyTaSK Calendar tanpa upload fail.</p>
+      </div>
+      <button class="close-btn" onclick="closeChatGPTImport()">×</button>
+    </div>
+    <div class="chatgpt-import-box">
+      <textarea id="chatGPTImportText" placeholder='Paste JSON di sini. Contoh: {"tasks":[{"title":"Siapkan slide shading","due":"2026-07-16","category":"PdP / Kelas","priority":"High","note":"Untuk kelas rendering"}]}'></textarea>
+      <div class="chatgpt-import-actions">
+        <button class="chatgpt-primary" onclick="pasteChatGPTClipboard()">Paste from Clipboard</button>
+        <button class="chatgpt-primary" onclick="applyChatGPTImport()">Apply to Calendar</button>
+        <button class="chatgpt-soft" onclick="previewChatGPTImport()">Preview</button>
+        <button class="chatgpt-soft" onclick="clearChatGPTImport()">Clear</button>
+      </div>
+      <div class="chatgpt-import-status" id="chatGPTImportStatus">Ready. Format disokong: array task atau object {"tasks":[...]}.</div>
+      <div class="ai-plan-list" id="chatGPTImportPreview"></div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="aiPlannerModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div><h2>🤖 AI Planner</h2><p>Untuk v1.5 ini, guna text dahulu. Voice akan masuk fasa berikutnya.</p></div>
+      <button class="close-btn" onclick="closeAIPlanner()">×</button>
+    </div>
+    <div class="ai-modal-grid">
+      <textarea id="aiInstructionMobile" placeholder="Contoh: Esok siapkan bahan kelas, Jumaat submit KPI, minggu depan sambung thesis. Susun ikut priority."></textarea>
+      <div class="ai-planner-actions">
+        <button class="ai-plan-primary" onclick="generateAIPlan(true)">Generate Plan</button>
+        <button class="ai-plan-soft" onclick="applyAIPlan()">Apply</button>
+        <button class="ai-plan-soft" onclick="clearAIPlan()">Clear</button><button class="ai-plan-soft" onclick="openChatGPTImport()">Import ChatGPT</button>
+      </div>
+      <div class="ai-plan-status" id="aiPlanStatusMobile">AI Planner ready.</div>
+      <div class="ai-plan-list" id="aiPlanPreviewMobile"></div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="settingsModal"><div class="modal"><div class="modal-head"><div><h2>MyTaSK Settings</h2><p>Edit item dropdown. Warna card kini auto-generate ikut Category menggunakan vibrant hue colours dan boleh support lebih 20 warna tanpa setting manual.</p></div><button class="close-btn" onclick="closeSettings()">×</button></div><div class="settings-grid"><div class="setting-field" style="grid-column:1/-1;"><label>Category Dropdown</label><textarea id="settingsCategories"></textarea></div></div><div class="side-actions"><button class="primary-side" onclick="saveSettingsFromModal()">Save Settings</button><button class="soft-side" onclick="resetDefaultSettings()">Reset Default</button><button class="danger-side" onclick="closeSettings()">Cancel</button></div></div></div><script>
 const defaultSettings={appName:"MyTaSK",categories:["General","PdP / Kelas","CCMS / Peperiksaan","Website Kolej","HLP / PhD / UPM","KPI / Laporan","Meeting","Personal"],colorLabels:{c1:"Lime",c2:"Orange",c3:"Purple",c4:"Green",c5:"Beige",c6:"Red",c7:"Blue",c8:"Pink",c9:"Yellow",c10:"Grey"}};const monthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];const shortMonths=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];const dayNames=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];const calendarDayNames=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];const colors=["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"];let tasks=[];let appSettings=JSON.parse(JSON.stringify(defaultSettings));let selectedDate=toISO(new Date());let calendarMonth=new Date();let view="today";let openIds=new Set();let saveTimers={};let isSignedIn=false;let draggedId=null;
 let undoStack=[];
 const MAX_UNDO=25;
@@ -239,7 +321,7 @@ async function undoLastAction(){
     if(isSignedIn && driveFileId){
       setSync("Undo saving...","saving");
       await uploadDriveDatabase({
-        version: "mytask-vercel-edition-v1.4",
+        version: "mytask-vercel-edition-v1.6",
         updatedAt: new Date().toISOString(),
         settings: appSettings,
         tasks: tasks
@@ -410,7 +492,7 @@ async function fetchUserEmail(){
 
 function defaultDatabase(){
   return {
-    version: "mytask-vercel-edition-v1.4.3",
+    version: "mytask-vercel-edition-v1.6.3",
     updatedAt: new Date().toISOString(),
     settings: JSON.parse(JSON.stringify(defaultSettings)),
     tasks: []
@@ -513,7 +595,7 @@ async function saveDatabaseSoon(){
     try{
       setSync("Saving...","saving");
       const db = {
-        version: "mytask-vercel-edition-v1.4.3",
+        version: "mytask-vercel-edition-v1.6.3",
         updatedAt: new Date().toISOString(),
         settings: appSettings,
         tasks: tasks
@@ -651,7 +733,7 @@ function renderDropdownSettings(){const defaultCategory=document.getElementById(
       syncAllTaskColorsByCategory();
 
       await uploadDriveDatabase({
-        version: "mytask-vercel-edition-v1.4.3",
+        version: "mytask-vercel-edition-v1.6.3",
         updatedAt: new Date().toISOString(),
         settings: appSettings,
         tasks: tasks
@@ -668,5 +750,152 @@ function renderDropdownSettings(){const defaultCategory=document.getElementById(
   };
   reader.readAsText(file);
   event.target.value="";
-}function openWebTaskDetail(id){const task=tasks.find(t=>t.id===id);if(!task)return;const modal=document.getElementById("webTaskModal");const body=document.getElementById("webTaskDetailBody");if(!modal||!body)return;body.innerHTML=`<div class="web-detail-grid"><div class="web-detail-field full"><label>Task Name</label><input value="${escapeHTML(task.title)}" oninput="updateTask('${task.id}','title',this.value);refreshWebTaskDetail('${task.id}')"/></div><div class="web-detail-field"><label>Due Date</label><input type="date" value="${escapeHTML(task.due)}" onchange="updateTask('${task.id}','due',this.value,true);refreshWebTaskDetail('${task.id}')"/></div><div class="web-detail-field"><label>Category</label><select onchange="updateTaskCategory('${task.id}',this.value);refreshWebTaskDetail('${task.id}')">${optionHTML(appSettings.categories,task.category||appSettings.categories[0])}</select></div><div class="web-detail-field full"><label>Detail / Notes</label><textarea placeholder="Add details, checklist, link or follow-up note..." oninput="updateTask('${task.id}','note',this.value);refreshWebTaskDetail('${task.id}')">${escapeHTML(task.note||"")}</textarea></div></div><div class="web-detail-actions"><button class="primary" onclick="toggleDone('${task.id}',${!task.done});refreshWebTaskDetail('${task.id}')">${task.done?"Undo Completed":"Mark Completed"}</button><button onclick="moveTaskToToday('${task.id}');refreshWebTaskDetail('${task.id}')">Move Today</button><button onclick="duplicateTask('${task.id}');closeWebTaskDetail()">Duplicate</button><button class="danger" onclick="deleteTask('${task.id}');closeWebTaskDetail()">Delete</button></div>`;modal.classList.add("open")}function refreshWebTaskDetail(id){setTimeout(()=>{const modal=document.getElementById("webTaskModal");if(modal&&modal.classList.contains("open"))openWebTaskDetail(id)},80)}function closeWebTaskDetail(){const modal=document.getElementById("webTaskModal");if(modal)modal.classList.remove("open")}function renderWebDropdowns(){const a=document.getElementById("webDefaultCategory");if(a){a.innerHTML=appSettings.categories.map(c=>`<option>${escapeHTML(c)}</option>`).join("")}}function renderWebCalendar(){renderWebDropdowns();const content=document.getElementById("webCalendarContent");if(!content)return;if(isSignedIn){const auth=document.getElementById("webAuthBox");if(auth)auth.style.display="none";content.style.display="block"}const title=document.getElementById("webCalendarTitle");const grid=document.getElementById("webCalendarGrid");if(!title||!grid)return;title.textContent=`${monthNames[calendarMonth.getMonth()]} ${calendarMonth.getFullYear()}`;grid.innerHTML="";calendarDayNames.forEach(day=>{const div=document.createElement("div");div.className="web-day-name";div.textContent=day.toUpperCase();grid.appendChild(div)});const y=calendarMonth.getFullYear();const m=calendarMonth.getMonth();const first=new Date(y,m,1);const start=new Date(first);const mondayOffset=(first.getDay()+6)%7;start.setDate(start.getDate()-mondayOffset);const today=toISO(new Date());for(let i=0;i<42;i++){const d=new Date(start);d.setDate(start.getDate()+i);const iso=toISO(d);const cell=document.createElement("div");cell.className="web-day-cell";if(d.getMonth()!==m)cell.classList.add("other");if(iso===today)cell.classList.add("today");if(iso===selectedDate)cell.classList.add("selected");cell.onclick=()=>{selectedDate=iso;calendarMonth=fromISO(iso);view="today";render()};const dayTasks=tasks.filter(t=>t.due===iso).sort((a,b)=>{if(a.done!==b.done)return a.done?1:-1;return Number(a.sortOrder||0)-Number(b.sortOrder||0)});cell.innerHTML=`<div class="web-day-num"><span>${d.getDate()}</span><span>${dayTasks.length?dayTasks.length:""}</span></div><div class="web-task-list"></div>`;const list=cell.querySelector(".web-task-list");dayTasks.slice(0,5).forEach(task=>{const chip=document.createElement("button");chip.className=`web-task-chip ${task.done?"done":""}`;chip.setAttribute("style",taskColorStyle(task));chip.onclick=(ev)=>{ev.stopPropagation();openWebTaskDetail(task.id)};chip.innerHTML=`<span class="web-task-date">${fromISO(task.due).getDate()}</span><span>${escapeHTML(task.title)}</span><span class="web-count">${task.done?"DONE":daysDiffFromToday(task.due)+"D"}</span>`;list.appendChild(chip)});if(dayTasks.length>5){const more=document.createElement("div");more.className="web-more";more.textContent=`+${dayTasks.length-5} more`;list.appendChild(more)}grid.appendChild(cell)}renderWebSelectedTasks()}function renderWebSelectedTasks(){const title=document.getElementById("webSelectedTitle");const wrap=document.getElementById("webSelectedTasks");if(!title||!wrap)return;title.textContent=prettyDate(selectedDate).toUpperCase();const list=tasks.filter(t=>t.due===selectedDate).sort((a,b)=>Number(a.sortOrder||0)-Number(b.sortOrder||0));wrap.innerHTML="";if(!list.length){wrap.innerHTML=`<div class="empty">No task on this date.</div>`;return}list.forEach(task=>{const card=document.createElement("div");card.className="web-selected-card";card.innerHTML=`<strong>${escapeHTML(task.title)}</strong><small>${task.done?"COMPLETED":taskLabel(task)} • ${escapeHTML(task.category||"General")}</small><div class="web-selected-actions"><button onclick="toggleDone('${task.id}',${!task.done})">${task.done?"Undo":"Done"}</button><button onclick="openWebTaskDetail('${task.id}')">Open Detail</button><button onclick="moveTaskToToday('${task.id}')">Move Today</button></div>`;wrap.appendChild(card)})}function moveWebMonth(delta){calendarMonth.setMonth(calendarMonth.getMonth()+delta);render()}function addWebTask(){const input=document.getElementById("webQuickTaskTitle");if(!input)return;const title=input.value.trim();if(!title)return;const selectedCategory=document.getElementById("webDefaultCategory")?.value||appSettings.categories[0]||"General";pushUndo("Add task");const task={id:uid(),title,due:selectedDate,time:"",category:selectedCategory,note:"",done:false,color:categoryColor(selectedCategory),sortOrder:Date.now(),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()};tasks.push(task);input.value="";openIds.add(task.id);render();saveTaskToSheet(task,false)}window.addEventListener("load",()=>{updateClock();setInterval(updateClock,30000);renderDropdownSettings();render();updateUndoButtons();setTimeout(attemptSilentLogin,900)});
+}function openWebTaskDetail(id){const task=tasks.find(t=>t.id===id);if(!task)return;const modal=document.getElementById("webTaskModal");const body=document.getElementById("webTaskDetailBody");if(!modal||!body)return;body.innerHTML=`<div class="web-detail-grid"><div class="web-detail-field full"><label>Task Name</label><input value="${escapeHTML(task.title)}" oninput="updateTask('${task.id}','title',this.value);refreshWebTaskDetail('${task.id}')"/></div><div class="web-detail-field"><label>Due Date</label><input type="date" value="${escapeHTML(task.due)}" onchange="updateTask('${task.id}','due',this.value,true);refreshWebTaskDetail('${task.id}')"/></div><div class="web-detail-field"><label>Category</label><select onchange="updateTaskCategory('${task.id}',this.value);refreshWebTaskDetail('${task.id}')">${optionHTML(appSettings.categories,task.category||appSettings.categories[0])}</select></div><div class="web-detail-field full"><label>Detail / Notes</label><textarea placeholder="Add details, checklist, link or follow-up note..." oninput="updateTask('${task.id}','note',this.value);refreshWebTaskDetail('${task.id}')">${escapeHTML(task.note||"")}</textarea></div></div><div class="web-detail-actions"><button class="primary" onclick="toggleDone('${task.id}',${!task.done});refreshWebTaskDetail('${task.id}')">${task.done?"Undo Completed":"Mark Completed"}</button><button onclick="moveTaskToToday('${task.id}');refreshWebTaskDetail('${task.id}')">Move Today</button><button onclick="duplicateTask('${task.id}');closeWebTaskDetail()">Duplicate</button><button class="danger" onclick="deleteTask('${task.id}');closeWebTaskDetail()">Delete</button></div>`;modal.classList.add("open")}function refreshWebTaskDetail(id){setTimeout(()=>{const modal=document.getElementById("webTaskModal");if(modal&&modal.classList.contains("open"))openWebTaskDetail(id)},80)}function closeWebTaskDetail(){const modal=document.getElementById("webTaskModal");if(modal)modal.classList.remove("open")}function renderWebDropdowns(){const a=document.getElementById("webDefaultCategory");if(a){a.innerHTML=appSettings.categories.map(c=>`<option>${escapeHTML(c)}</option>`).join("")}}function renderWebCalendar(){renderWebDropdowns();const content=document.getElementById("webCalendarContent");if(!content)return;if(isSignedIn){const auth=document.getElementById("webAuthBox");if(auth)auth.style.display="none";content.style.display="block"}const title=document.getElementById("webCalendarTitle");const grid=document.getElementById("webCalendarGrid");if(!title||!grid)return;title.textContent=`${monthNames[calendarMonth.getMonth()]} ${calendarMonth.getFullYear()}`;grid.innerHTML="";calendarDayNames.forEach(day=>{const div=document.createElement("div");div.className="web-day-name";div.textContent=day.toUpperCase();grid.appendChild(div)});const y=calendarMonth.getFullYear();const m=calendarMonth.getMonth();const first=new Date(y,m,1);const start=new Date(first);const mondayOffset=(first.getDay()+6)%7;start.setDate(start.getDate()-mondayOffset);const today=toISO(new Date());for(let i=0;i<42;i++){const d=new Date(start);d.setDate(start.getDate()+i);const iso=toISO(d);const cell=document.createElement("div");cell.className="web-day-cell";if(d.getMonth()!==m)cell.classList.add("other");if(iso===today)cell.classList.add("today");if(iso===selectedDate)cell.classList.add("selected");cell.onclick=()=>{selectedDate=iso;calendarMonth=fromISO(iso);view="today";render()};const dayTasks=tasks.filter(t=>t.due===iso).sort((a,b)=>{if(a.done!==b.done)return a.done?1:-1;return Number(a.sortOrder||0)-Number(b.sortOrder||0)});cell.innerHTML=`<div class="web-day-num"><span>${d.getDate()}</span><span>${dayTasks.length?dayTasks.length:""}</span></div><div class="web-task-list"></div>`;const list=cell.querySelector(".web-task-list");dayTasks.slice(0,5).forEach(task=>{const chip=document.createElement("button");chip.className=`web-task-chip ${task.done?"done":""}`;chip.setAttribute("style",taskColorStyle(task));chip.onclick=(ev)=>{ev.stopPropagation();openWebTaskDetail(task.id)};chip.innerHTML=`<span class="web-task-date">${fromISO(task.due).getDate()}</span><span>${escapeHTML(task.title)}</span><span class="web-count">${task.done?"DONE":daysDiffFromToday(task.due)+"D"}</span>`;list.appendChild(chip)});if(dayTasks.length>5){const more=document.createElement("div");more.className="web-more";more.textContent=`+${dayTasks.length-5} more`;list.appendChild(more)}grid.appendChild(cell)}renderWebSelectedTasks()}function renderWebSelectedTasks(){const title=document.getElementById("webSelectedTitle");const wrap=document.getElementById("webSelectedTasks");if(!title||!wrap)return;title.textContent=prettyDate(selectedDate).toUpperCase();const list=tasks.filter(t=>t.due===selectedDate).sort((a,b)=>Number(a.sortOrder||0)-Number(b.sortOrder||0));wrap.innerHTML="";if(!list.length){wrap.innerHTML=`<div class="empty">No task on this date.</div>`;return}list.forEach(task=>{const card=document.createElement("div");card.className="web-selected-card";card.innerHTML=`<strong>${escapeHTML(task.title)}</strong><small>${task.done?"COMPLETED":taskLabel(task)} • ${escapeHTML(task.category||"General")}</small><div class="web-selected-actions"><button onclick="toggleDone('${task.id}',${!task.done})">${task.done?"Undo":"Done"}</button><button onclick="openWebTaskDetail('${task.id}')">Open Detail</button><button onclick="moveTaskToToday('${task.id}')">Move Today</button></div>`;wrap.appendChild(card)})}function moveWebMonth(delta){calendarMonth.setMonth(calendarMonth.getMonth()+delta);render()}function addWebTask(){const input=document.getElementById("webQuickTaskTitle");if(!input)return;const title=input.value.trim();if(!title)return;const selectedCategory=document.getElementById("webDefaultCategory")?.value||appSettings.categories[0]||"General";pushUndo("Add task");const task={id:uid(),title,due:selectedDate,time:"",category:selectedCategory,note:"",done:false,color:categoryColor(selectedCategory),sortOrder:Date.now(),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()};tasks.push(task);input.value="";openIds.add(task.id);render();saveTaskToSheet(task,false)}
+
+let chatGPTImportedTasks=[];
+
+function openChatGPTImport(){
+  const m=document.getElementById("chatGPTImportModal");
+  if(m)m.classList.add("open");
+}
+function closeChatGPTImport(){
+  const m=document.getElementById("chatGPTImportModal");
+  if(m)m.classList.remove("open");
+}
+function setChatGPTImportStatus(text){
+  const e=document.getElementById("chatGPTImportStatus");
+  if(e)e.textContent=text;
+}
+async function pasteChatGPTClipboard(){
+  try{
+    const text=await navigator.clipboard.readText();
+    document.getElementById("chatGPTImportText").value=text;
+    previewChatGPTImport();
+    setChatGPTImportStatus("Clipboard pasted. Semak preview sebelum apply.");
+  }catch(err){
+    console.error(err);
+    alert("Browser tidak benarkan clipboard. Paste manual guna Ctrl+V.");
+  }
+}
+function extractJSONFromText(text){
+  const raw=String(text||"").trim();
+  if(!raw)throw new Error("Tiada JSON untuk diimport.");
+  try{return JSON.parse(raw)}catch(e){}
+  const fenced=raw.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if(fenced&&fenced[1])return JSON.parse(fenced[1].trim());
+  const firstObj=raw.indexOf("{"), lastObj=raw.lastIndexOf("}");
+  if(firstObj>=0&&lastObj>firstObj){
+    try{return JSON.parse(raw.slice(firstObj,lastObj+1))}catch(e){}
+  }
+  const firstArr=raw.indexOf("["), lastArr=raw.lastIndexOf("]");
+  if(firstArr>=0&&lastArr>firstArr){
+    try{return JSON.parse(raw.slice(firstArr,lastArr+1))}catch(e){}
+  }
+  throw new Error("Format JSON tidak dapat dibaca.");
+}
+function normalizeImportedChatGPTTask(item,index=0){
+  const category=item.category||item.kategori||appSettings.categories[0]||"General";
+  const due=item.due||item.dueDate||item.date||item.tarikh||selectedDate;
+  return normalizeTask({
+    id:uid(),
+    title:item.title||item.task||item.name||item.tugasan||"Untitled Task",
+    due:/^\d{4}-\d{2}-\d{2}$/.test(String(due))?due:selectedDate,
+    category:appSettings.categories.includes(category)?category:(category||appSettings.categories[0]||"General"),
+    note:item.note||item.notes||item.catatan||item.reason||item.priority?`Priority: ${item.priority||"Medium"}${item.note?` • ${item.note}`:""}`:"",
+    done:false,
+    color:categoryColor(category),
+    sortOrder:Date.now()+index,
+    createdAt:new Date().toISOString(),
+    updatedAt:new Date().toISOString()
+  });
+}
+function parseChatGPTImport(){
+  const text=document.getElementById("chatGPTImportText")?.value||"";
+  const data=extractJSONFromText(text);
+  let list=[];
+  if(Array.isArray(data))list=data;
+  else if(Array.isArray(data.tasks))list=data.tasks;
+  else if(Array.isArray(data.plan))list=data.plan;
+  else if(data.title||data.task||data.tugasan)list=[data];
+  else throw new Error("JSON dibaca, tapi tiada array tasks.");
+  if(!list.length)throw new Error("Tiada task dalam JSON.");
+  return list.map(normalizeImportedChatGPTTask);
+}
+function renderChatGPTImportPreview(){
+  const el=document.getElementById("chatGPTImportPreview");
+  if(!el)return;
+  el.innerHTML=chatGPTImportedTasks.length?chatGPTImportedTasks.map((t,i)=>`<div class="ai-plan-item"><strong>${i+1}. ${escapeHTML(t.title)}</strong><small>Due: ${escapeHTML(t.due)} • Category: ${escapeHTML(t.category)}${t.note?`<br>Note: ${escapeHTML(t.note)}`:""}</small></div>`).join(""):`<div class="empty">Belum ada preview import.</div>`;
+}
+function previewChatGPTImport(){
+  try{
+    chatGPTImportedTasks=parseChatGPTImport();
+    renderChatGPTImportPreview();
+    setChatGPTImportStatus(`${chatGPTImportedTasks.length} task dikesan. Klik Apply to Calendar untuk masukkan.`);
+  }catch(err){
+    console.error(err);
+    chatGPTImportedTasks=[];
+    renderChatGPTImportPreview();
+    setChatGPTImportStatus("Error: "+err.message);
+  }
+}
+async function applyChatGPTImport(){
+  try{
+    if(!chatGPTImportedTasks.length)chatGPTImportedTasks=parseChatGPTImport();
+    if(!chatGPTImportedTasks.length){alert("Tiada task untuk apply.");return}
+    if(!confirm(`Apply ${chatGPTImportedTasks.length} task dari ChatGPT ke Calendar?`))return;
+    pushUndo("ChatGPT import");
+    tasks=tasks.concat(chatGPTImportedTasks.map((t,i)=>normalizeTask({...t,id:uid(),sortOrder:Date.now()+i,updatedAt:new Date().toISOString()})));
+    syncAllTaskColorsByCategory();
+    render();
+    setChatGPTImportStatus("Imported. Saving to Google Drive...");
+    if(isSignedIn&&driveFileId){
+      await uploadDriveDatabase({version:"mytask-vercel-edition-v1.6",updatedAt:new Date().toISOString(),settings:appSettings,tasks});
+      setSync("Synced","");
+      setChatGPTImportStatus("Import saved to Google Drive.");
+    }else{
+      setChatGPTImportStatus("Imported locally. Login Google untuk sync.");
+    }
+    chatGPTImportedTasks=[];
+    renderChatGPTImportPreview();
+  }catch(err){
+    console.error(err);
+    setChatGPTImportStatus("Import failed: "+err.message);
+    alert("Import failed: "+err.message);
+  }
+}
+function clearChatGPTImport(){
+  const t=document.getElementById("chatGPTImportText");if(t)t.value="";
+  chatGPTImportedTasks=[];
+  renderChatGPTImportPreview();
+  setChatGPTImportStatus("Cleared.");
+}
+
+let aiPlannedTasks=[];
+function openAIPlanner(){const m=document.getElementById("aiPlannerModal");if(m)m.classList.add("open")}
+function closeAIPlanner(){const m=document.getElementById("aiPlannerModal");if(m)m.classList.remove("open")}
+function getAIInstruction(isMobile=false){const m=document.getElementById("aiInstructionMobile");const d=document.getElementById("aiInstruction");return ((isMobile&&m?m.value:d?d.value:"")||"").trim()}
+function setAIStatus(text){["aiPlanStatus","aiPlanStatusMobile"].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=text})}
+function renderAIPlanPreview(){const list=aiPlannedTasks.length?aiPlannedTasks.map((t,i)=>`<div class="ai-plan-item"><strong>${i+1}. ${escapeHTML(t.title||"Untitled Task")}</strong><small>Due: ${escapeHTML(t.due||selectedDate)} • Category: ${escapeHTML(t.category||"General")} • Priority: ${escapeHTML(t.priority||"Medium")}${t.note?"<br>Note: "+escapeHTML(t.note):""}</small></div>`).join(""):`<div class="empty">Belum ada preview AI.</div>`;["aiPlanPreview","aiPlanPreviewMobile"].forEach(id=>{const e=document.getElementById(id);if(e)e.innerHTML=list})}
+async function generateAIPlan(isMobile=false){
+  const instruction=getAIInstruction(isMobile); if(!instruction){alert("Taip arahan kerja dahulu.");return}
+  setAIStatus("AI sedang susun plan...");
+  try{
+    const res=await fetch("/api/ai-plan-task",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({instruction,currentDate:toISO(new Date()),selectedDate,categories:appSettings.categories||[],existingTasks:tasks.slice(0,120).map(t=>({title:t.title,due:t.due,category:t.category,done:t.done,note:t.note||""}))})});
+    const data=await res.json(); if(!res.ok)throw new Error(data.error||"AI planner request failed.");
+    aiPlannedTasks=(data.tasks||[]).map(item=>({id:uid(),title:String(item.title||"Untitled Task").trim(),due:item.due||selectedDate,category:appSettings.categories.includes(item.category)?item.category:(item.category||appSettings.categories[0]||"General"),note:item.note||item.reason||"",priority:item.priority||"Medium",done:false,color:categoryColor(item.category||appSettings.categories[0]||"General"),sortOrder:Date.now()+Math.floor(Math.random()*10000),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()}));
+    renderAIPlanPreview(); setAIStatus(data.mode==="fallback"?"Fallback planner generated. Set OPENAI_API_KEY for real AI.":"AI plan generated. Review before apply.");
+  }catch(err){console.error(err);setAIStatus("AI planner error.");alert("AI Planner gagal: "+err.message)}
+}
+async function applyAIPlan(){
+  if(!aiPlannedTasks.length){alert("Generate plan dahulu sebelum Apply.");return}
+  if(!confirm("Apply semua AI planned task ke calendar MyTaSK?"))return;
+  pushUndo("AI Planner apply");
+  const now=Date.now(); const newTasks=aiPlannedTasks.map((t,i)=>normalizeTask({...t,id:uid(),sortOrder:now+i,color:categoryColor(t.category),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()}));
+  tasks=tasks.concat(newTasks);syncAllTaskColorsByCategory();aiPlannedTasks=[];renderAIPlanPreview();render();setAIStatus("AI tasks applied and saving...");
+  try{if(isSignedIn&&driveFileId){await uploadDriveDatabase({version:"mytask-vercel-edition-v1.6",updatedAt:new Date().toISOString(),settings:appSettings,tasks});setSync("Synced","");setAIStatus("AI tasks saved to Google Drive.")}else setAIStatus("Tasks applied locally. Login Google untuk sync.")}
+  catch(err){console.error(err);setAIStatus("Apply success, but save error.");setSync("AI save error","error")}
+}
+function clearAIPlan(){aiPlannedTasks=[];renderAIPlanPreview();setAIStatus("AI Planner cleared.")}
+
+window.addEventListener("load",()=>{updateClock();setInterval(updateClock,30000);renderDropdownSettings();render();updateUndoButtons();setTimeout(attemptSilentLogin,900)});
 </script></body></html>
