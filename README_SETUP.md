@@ -1,120 +1,935 @@
-# MyTaSK Vercel Edition v1.1 Debug
+<!DOCTYPE html><html lang="ms"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/><title>MyTaSK Vercel Edition v1.7 v1.3</title><style>
+:root{--bg:#111112;--panel:#1c1c1f;--panel-2:#242428;--text:#f5f5f6;--muted:#a5a5ad;--line:#38383f;--accent:#8b5cf6;--cyan:#00c2ff;--pink:#ff2ab3;--green:#b6e35a;--orange:#ff9a66;--purple:#b399ff;--red:#ff4e6a;--blue:#66a6ff;--yellow:#ffd86b;--grey:#bfc2c7;--shadow:0 24px 60px rgba(0,0,0,.35)}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(139,92,246,.25),transparent 34%),radial-gradient(circle at bottom right,rgba(0,194,255,.14),transparent 34%),var(--bg);min-height:100vh;overscroll-behavior-x:none}button,input,textarea,select{font-family:Arial,Helvetica,sans-serif}.app-shell{width:min(1500px,100%);margin:0 auto;padding:24px;display:grid;grid-template-columns:minmax(390px,520px) 1fr;gap:24px;min-height:100vh;align-items:start}.app-frame{width:100%;margin:0 auto;background:#0b0b0d;border:10px solid #202024;border-radius:44px;box-shadow:var(--shadow);overflow:hidden;position:sticky;top:24px;min-height:820px}.brand-mark{font-family:'Century Gothic','CenturyGothic',Arial,sans-serif;letter-spacing:3px;font-weight:400;text-transform:none}.statusbar{height:34px;background:var(--accent);display:flex;justify-content:space-between;align-items:center;padding:0 24px;font-size:13px;font-weight:800}.screen{background:var(--panel);min-height:786px;position:relative;overflow:hidden}.auth-screen{position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(0,194,255,.18),transparent 32%),radial-gradient(circle at 90% 90%,rgba(255,42,179,.18),transparent 32%),#1c1c1f;z-index:100;display:grid;place-items:center;padding:28px;text-align:center}.auth-screen.hidden{display:none}.auth-card{width:100%;max-width:420px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);border-radius:30px;padding:28px 22px;box-shadow:var(--shadow)}.auth-logo{width:72px;height:72px;border-radius:24px;margin:0 auto 18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--cyan));font-size:24px;font-weight:900}.auth-card h1{font-size:30px;margin:0 0 10px}.auth-card p{color:var(--muted);line-height:1.55;font-size:14px;margin:0 0 18px}.google-btn{width:100%;border:0;border-radius:18px;background:white;color:#111;padding:14px 16px;font-size:15px;font-weight:900;cursor:pointer}.auth-error{margin-top:14px;color:#ff9bad;font-size:13px;line-height:1.45;display:none}.auth-error.show{display:block}.header{padding:18px 18px 12px;background:#202023;border-bottom:1px solid var(--line)}.top-row{display:flex;justify-content:space-between;align-items:start;gap:12px}.title-block small{display:block;color:var(--muted);font-size:12px;margin-bottom:3px}h1{margin:0;font-size:26px;letter-spacing:-.8px;line-height:1.05}.icon-row{display:flex;gap:7px}.icon-btn{width:40px;height:40px;border-radius:15px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);display:grid;place-items:center;cursor:pointer;font-size:17px}.sync-dot{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:11px;margin-top:7px;font-weight:800}.sync-dot:before{content:"";width:8px;height:8px;border-radius:99px;background:#3ddc84;display:inline-block}.sync-dot.saving:before{background:var(--orange)}.sync-dot.error:before{background:var(--red)}.date-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:12px}.date-pill{padding:7px 2px;border-radius:14px;text-align:center;color:var(--muted);background:#2a2a2f;border:1px solid transparent;cursor:pointer;transition:.18s ease}.date-pill.active{background:#f7f7f7;color:#111}.date-pill .dow{font-size:9px;font-weight:800;text-transform:uppercase;opacity:.75}.date-pill .num{font-size:14px;font-weight:900;margin-top:2px}.calendar-drop{display:none;padding:12px;background:#19191d;border-bottom:1px solid var(--line);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.calendar-drop.open{display:flex;gap:10px}.calendar-drop::-webkit-scrollbar{height:6px}.calendar-drop::-webkit-scrollbar-thumb{background:#3a3a44;border-radius:999px}.month-card{min-width:min(100%,390px);scroll-snap-align:center;background:#202026;border:1px solid #33333a;border-radius:20px;padding:10px}.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:10px}.cal-title{font-weight:900;font-size:13px}.mini-btn{padding:6px 8px;border-radius:10px;border:1px solid var(--line);background:var(--panel-2);color:var(--text);cursor:pointer;font-weight:800;font-size:11px}.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.cal-day-name{font-size:9px;color:var(--muted);text-align:center;font-weight:900;padding-bottom:2px}.cal-day{aspect-ratio:1/1;border-radius:9px;background:#25252a;display:grid;place-items:center;font-size:11px;color:var(--muted);cursor:pointer;position:relative;border:1px solid transparent}.cal-day.other{opacity:.22}.cal-day.today{border-color:var(--cyan);color:var(--cyan)}.cal-day.selected{background:var(--accent);color:white}.cal-dot{position:absolute;bottom:3px;width:4px;height:4px;border-radius:99px;background:var(--pink)}.quick-add{display:grid;grid-template-columns:1fr 42px;gap:8px;padding:12px 16px;background:#1a1a1e;border-bottom:1px solid var(--line)}.quick-add input{border:1px solid var(--line);background:#2a2a30;color:var(--text);border-radius:15px;padding:11px 13px;outline:none;font-size:13px}.add-btn{width:42px;height:42px;border-radius:99px;border:0;background:var(--cyan);color:white;font-size:24px;cursor:pointer;display:grid;place-items:center;line-height:1}.task-area{padding:0 0 76px;max-height:596px;overflow-y:auto;scroll-behavior:smooth}.section-label{padding:7px 16px;font-size:12px;font-weight:900;text-align:center;color:white;position:sticky;top:0;z-index:2}.today-label{background:var(--cyan)}.tomorrow-label{background:var(--accent)}.overdue-label{background:var(--pink)}.upcoming-label{background:#3c3c44}.task-group{padding:10px 12px 12px;display:grid;gap:7px}.task-card{border-radius:16px;overflow:hidden;background:var(--panel-2);border:1px solid #34343b;touch-action:pan-y;transition:transform .12s ease,opacity .12s ease}.task-card.open{border-color:rgba(255,255,255,.16)}.task-card.dragging{opacity:.55;transform:scale(.98);border:1px dashed white}.task-main{width:100%;border:0;padding:9px 10px;display:grid;grid-template-columns:42px 24px 1fr 48px 22px;gap:8px;align-items:center;text-align:left;color:#111;cursor:pointer;border-radius:0;background:var(--green);min-height:48px}.task-main.c1{background:var(--green)}.task-main.c2{background:var(--orange)}.task-main.c3{background:var(--purple)}.task-main.c4{background:#32c28a}.task-main.c5{background:#e6c196}.task-main.c6{background:#f34f6b;color:white}.task-main.c7{background:var(--blue)}.task-main.c8{background:#ff8bd1}.task-main.c9{background:var(--yellow)}.task-main.c10{background:var(--grey)}.task-main.done{opacity:.55}.date-box{width:38px;min-height:34px;display:grid;place-items:center;text-align:center;line-height:1;color:inherit;background:transparent;border:0}.date-box .d{display:block;font-size:22px;font-weight:900;letter-spacing:-1px}.date-box .m{display:block;font-size:8px;font-weight:900;text-transform:uppercase;margin-top:2px;opacity:.72}.check{width:23px;height:23px;border-radius:8px;border:2px solid rgba(0,0,0,.22);background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:15px;font-weight:900;cursor:pointer;color:inherit}.task-title{display:block;font-weight:900;font-size:13px;line-height:1.15;word-break:break-word}.task-title.done{text-decoration:line-through;opacity:.65}.task-meta{display:block;font-size:9.5px;margin-top:7px;opacity:.72;font-weight:800}.plus-mini{width:22px;height:22px;border-radius:99px;background:rgba(0,0,0,.15);display:grid;place-items:center;font-size:15px;font-weight:400}.task-detail{display:none;padding:10px;background:#25252a;border-top:1px solid rgba(255,255,255,.08)}.task-card.open .task-detail{display:block}.detail-form{display:grid;gap:8px}.detail-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}.detail-form label{color:var(--muted);font-size:10px;font-weight:900;display:block;margin-bottom:4px}.detail-form input,.detail-form select,.detail-form textarea{width:100%;border:1px solid var(--line);background:#1c1c20;color:var(--text);border-radius:12px;padding:9px 10px;outline:none;font-size:12px}.detail-form textarea{min-height:64px;resize:vertical}.detail-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:2px}.small-action{border:1px solid var(--line);background:#33333a;color:var(--text);border-radius:11px;padding:8px 10px;font-size:11px;cursor:pointer}.small-action.danger{background:rgba(255,78,106,.14);color:#ff8fa1;border-color:rgba(255,78,106,.25)}.empty{color:var(--muted);text-align:center;padding:18px;border:1px dashed var(--line);border-radius:16px;line-height:1.45;background:rgba(255,255,255,.03);font-size:13px}.floating-footer{position:absolute;left:0;right:0;bottom:0;padding:14px 16px 16px;background:linear-gradient(transparent,rgba(28,28,31,.95) 30%,#1c1c1f 100%);pointer-events:none}.footer-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:#111114;border:1px solid #303038;padding:6px;border-radius:20px;pointer-events:auto}.tab{border:0;background:transparent;color:var(--muted);border-radius:15px;padding:8px 4px;cursor:pointer;font-size:10.5px;font-weight:900}.tab.active{color:#111;background:white}.desktop-panel{display:grid;gap:18px}.side-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);border-radius:28px;padding:22px;box-shadow:var(--shadow)}.side-card h2{margin:0 0 8px;font-size:24px;letter-spacing:-.6px}.side-card p{color:var(--muted);line-height:1.6;margin:0;font-size:14px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);padding:15px;border-radius:20px}.stat-num{font-size:28px;font-weight:900;color:white}.stat-label{color:var(--muted);font-size:12px;margin-top:4px;font-weight:800}.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.setting-field label{display:block;color:var(--muted);font-size:12px;font-weight:900;margin-bottom:6px}.setting-field input,.setting-field select,.setting-field textarea{width:100%;background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px;outline:none}.setting-field textarea{min-height:100px;resize:vertical}.setting-field select option,.detail-form select option{background:#222;color:white}.side-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.side-actions button{border:0;border-radius:16px;padding:12px 14px;cursor:pointer;font-weight:900}.primary-side{background:var(--accent);color:white}.soft-side{background:rgba(255,255,255,.1);color:white}.danger-side{background:rgba(255,78,106,.18);color:#ff9bad}a.db-link{color:var(--cyan);font-weight:900;text-decoration:none}.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:200;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{width:min(720px,100%);max-height:90vh;overflow-y:auto;background:#1d1d22;border:1px solid rgba(255,255,255,.12);border-radius:28px;box-shadow:var(--shadow);padding:22px}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:start;margin-bottom:16px}.modal h2{margin:0;font-size:24px}.modal p{margin:6px 0 0;color:var(--muted);line-height:1.5;font-size:14px}.close-btn{width:38px;height:38px;border-radius:14px;border:1px solid var(--line);background:#2a2a30;color:white;cursor:pointer;font-size:20px}@media(min-width:981px){.app-frame.web-mode{max-width:none;border-radius:28px;border-width:1px;min-height:calc(100vh - 48px)}.app-frame.web-mode .screen{min-height:calc(100vh - 84px)}.app-frame.web-mode .task-area{max-height:calc(100vh - 292px)}}@media(max-width:980px){.app-shell{grid-template-columns:1fr;padding:14px}.app-frame{position:relative;top:auto;max-width:560px}.desktop-panel{order:-1}}@media(max-width:560px){.app-shell{padding:0}.app-frame{border:0;border-radius:0;max-width:none;min-height:100vh}.screen{min-height:calc(100vh - 34px)}.desktop-panel{display:none}.statusbar{border-radius:0}.detail-row{grid-template-columns:1fr}.task-area{max-height:calc(100vh - 232px)}.month-card{min-width:92vw}}
+.web-calendar-card{display:none}.web-topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:16px}.web-brand h1{font-size:36px;margin:0;letter-spacing:-1px}.web-brand .brand-small{font-family:'Century Gothic','CenturyGothic',Arial,sans-serif;letter-spacing:4px;color:var(--muted);font-size:12px;margin-top:4px}.web-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.web-actions input,.web-actions select{background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:12px;outline:none}.web-actions select option{background:#222;color:white}.web-calendar-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:16px 0 12px}.web-calendar-title{font-size:24px;font-weight:900}.web-calendar-controls{display:flex;gap:8px}.web-calendar-controls button,.web-add-btn{border:0;border-radius:14px;padding:11px 14px;font-weight:900;cursor:pointer}.web-calendar-controls button{background:rgba(255,255,255,.1);color:white}.web-add-btn{background:var(--cyan);color:white}.web-calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.web-day-name{font-size:12px;font-weight:900;color:var(--muted);text-align:center;padding:7px 4px}.web-day-cell{min-height:142px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:8px;overflow:hidden}.web-day-cell.other{opacity:.35}.web-day-cell.today{border-color:var(--cyan);box-shadow:0 0 0 2px rgba(0,194,255,.12)}.web-day-cell.selected{border-color:var(--accent)}.web-day-num{font-weight:900;font-size:14px;margin-bottom:7px;display:flex;justify-content:space-between}.web-task-list{display:grid;gap:5px}.web-task-chip{border:0;width:100%;text-align:left;border-radius:10px;padding:6px 7px;color:#111;cursor:pointer;display:grid;grid-template-columns:auto 1fr;gap:5px;align-items:center;font-size:11px;font-weight:900;line-height:1.15;min-height:28px}.web-task-chip.done{opacity:.55;text-decoration:line-through}.web-task-chip.c1{background:var(--green)}.web-task-chip.c2{background:var(--orange)}.web-task-chip.c3{background:var(--purple)}.web-task-chip.c4{background:#32c28a}.web-task-chip.c5{background:#e6c196}.web-task-chip.c6{background:#f34f6b;color:white}.web-task-chip.c7{background:var(--blue)}.web-task-chip.c8{background:#ff8bd1}.web-task-chip.c9{background:var(--yellow)}.web-task-chip.c10{background:var(--grey)}.web-task-date{font-size:10px;opacity:.7}.web-more{font-size:11px;color:var(--muted);font-weight:900;padding:3px 2px}.web-empty-auth{padding:24px;border:1px dashed rgba(255,255,255,.16);border-radius:22px;color:var(--muted);text-align:center}.web-empty-auth button{margin-top:12px;border:0;background:white;color:#111;border-radius:16px;padding:12px 16px;font-weight:900;cursor:pointer}.web-task-list-panel{margin-top:18px}.web-task-list-panel h2{margin:0 0 10px;font-size:20px}.web-selected-tasks{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}.web-selected-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:12px}.web-selected-card strong{display:block;margin-bottom:7px}.web-selected-card small{color:var(--muted);font-weight:900}.web-selected-actions{display:flex;gap:7px;margin-top:10px}.web-selected-actions button{border:0;border-radius:12px;padding:8px 10px;font-size:11px;font-weight:900;cursor:pointer;background:rgba(255,255,255,.1);color:white}.web-selected-actions button:first-child{background:var(--cyan);color:white}@media (min-width:981px){.app-shell{display:block;max-width:1500px;padding:28px}.app-frame{display:none}.desktop-panel{display:block}.web-calendar-card{display:block;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);border-radius:30px;padding:24px;box-shadow:var(--shadow);margin-bottom:18px}.side-card{margin-bottom:18px}}@media (max-width:980px){.web-calendar-card{display:none!important}}
+@media (min-width:981px){
+  .desktop-panel{
+    display:grid!important;
+    grid-template-columns:1fr;
+    gap:18px;
+    width:100%;
+    max-width:1500px;
+    margin:0 auto;
+  }
+  .web-calendar-card,
+  .desktop-panel .side-card{
+    width:100%;
+    margin:0;
+  }
+  .web-calendar-card{
+    order:1;
+  }
+  .desktop-panel .side-card:nth-of-type(1){
+    order:2;
+  }
+  .desktop-panel .side-card:nth-of-type(2){
+    order:3;
+  }
+  .web-calendar-grid{
+    width:100%;
+  }
+  .web-day-cell{
+    min-height:150px;
+  }
+}
 
-Versi ini bukan lagi Apps Script Web App. Ia boleh diupload terus ke Vercel sebagai static web app.
+/* v4.0 desktop layout hard override */
+@media (min-width:981px){
+  body{
+    overflow-x:hidden;
+  }
+  .app-shell{
+    display:block !important;
+    width:100% !important;
+    max-width:1500px !important;
+    margin:0 auto !important;
+    padding:28px !important;
+    min-height:100vh !important;
+  }
+  .app-frame{
+    display:none !important;
+    visibility:hidden !important;
+    width:0 !important;
+    height:0 !important;
+    min-height:0 !important;
+    overflow:hidden !important;
+    position:absolute !important;
+    left:-99999px !important;
+  }
+  .desktop-panel{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+  }
+  .web-calendar-card{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    order:1 !important;
+  }
+  .desktop-panel .side-card{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+  }
+  .desktop-panel .side-card:nth-of-type(1){
+    order:2 !important;
+  }
+  .desktop-panel .side-card:nth-of-type(2){
+    order:3 !important;
+  }
+  .web-calendar-grid{
+    width:100% !important;
+  }
+  .web-day-cell{
+    min-height:155px !important;
+  }
+}
 
-## Apa yang berubah
-
-- Paparan berjalan terus dari Vercel.
-- Login guna Google OAuth.
-- Data task/settings disimpan dalam Google Drive user sebagai fail JSON:
-  `MyTaSK Database.json`
-- Tiada `google.script.run`.
-- Tiada `Code.gs`.
-- Apps Script tidak diperlukan.
-
-## Fail dalam ZIP
-
-- `index.html`
-- `vercel.json`
-- `manifest.webmanifest`
-- `README_SETUP.md`
-
-## Setup Google OAuth Client ID
-
-1. Buka Google Cloud Console.
-2. Create project baru, contoh: `MyTaSK`.
-3. Pergi `APIs & Services > Library`.
-4. Enable:
-   - Google Drive API
-5. Pergi `APIs & Services > OAuth consent screen`.
-6. Pilih External kalau untuk pengguna luar.
-7. Isi app name: `MyTaSK`
-8. Tambah scope:
-   - `https://www.googleapis.com/auth/drive.file`
-9. Pergi `APIs & Services > Credentials`.
-10. Create Credentials > OAuth client ID.
-11. Application type: Web application.
-12. Authorized JavaScript origins:
-    - `http://localhost:3000` untuk test local jika perlu
-    - `https://NAMA-PROJECT.vercel.app`
-    - domain custom kau nanti, contoh `https://mytask.arkideska.com`
-13. Copy Client ID.
-
-## Masukkan Client ID
-
-Buka `index.html`, cari:
-
-`PASTE_GOOGLE_OAUTH_CLIENT_ID_HERE.apps.googleusercontent.com`
-
-Ganti dengan Client ID sebenar daripada Google Cloud Console.
-
-Contoh:
-
-`1234567890-abcxyz.apps.googleusercontent.com`
-
-## Upload ke Vercel
-
-1. Buka https://vercel.com/drop
-2. Drag folder atau ZIP ini.
-3. Deploy.
-4. Buka URL Vercel.
-5. Login Google.
-6. Benarkan permission Google Drive.
-7. MyTaSK akan cipta fail `MyTaSK Database.json` dalam Google Drive user.
-
-## Nota penting
-
-OAuth scope `drive.file` membenarkan app access fail yang dicipta/dibuka oleh app sahaja. Ia lebih sesuai daripada scope Drive penuh.
-
-Kalau app mahu digunakan ramai orang awam, Google mungkin perlukan OAuth consent verification sebelum app nampak benar-benar professional.
+/* v4.0 mobile layout hard override */
+@media (max-width:980px){
+  .web-calendar-card{
+    display:none !important;
+  }
+  .app-frame{
+    display:block !important;
+    visibility:visible !important;
+    width:100% !important;
+    height:auto !important;
+    position:relative !important;
+    left:auto !important;
+  }
+}
 
 
-## OAuth origins untuk projek ini
+/* v4.1 desktop ordering + Monday calendar + web detail modal */
+@media (min-width:981px){
+  .desktop-panel{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:18px!important;
+  }
+  .desktop-panel .sync-card{
+    order:1!important;
+  }
+  .web-calendar-card{
+    order:2!important;
+  }
+  .desktop-panel .settings-card{
+    order:3!important;
+  }
+}
+.web-detail-modal{position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:260;display:none;align-items:center;justify-content:center;padding:18px}.web-detail-modal.open{display:flex}.web-detail-card{width:min(720px,100%);max-height:90vh;overflow-y:auto;background:#1d1d22;border:1px solid rgba(255,255,255,.12);border-radius:28px;box-shadow:var(--shadow);padding:22px}.web-detail-head{display:flex;justify-content:space-between;gap:12px;align-items:start;margin-bottom:16px}.web-detail-head h2{margin:0;font-size:24px}.web-detail-head p{margin:6px 0 0;color:var(--muted);font-size:13px}.web-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.web-detail-field{display:block}.web-detail-field.full{grid-column:1/-1}.web-detail-field label{display:block;color:var(--muted);font-size:12px;font-weight:900;margin-bottom:6px}.web-detail-field input,.web-detail-field select,.web-detail-field textarea{width:100%;background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px;outline:none}.web-detail-field select option{background:#222;color:#fff}.web-detail-field textarea{min-height:110px;resize:vertical}.web-detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.web-detail-actions button{border:0;border-radius:14px;padding:11px 14px;font-weight:900;cursor:pointer;background:rgba(255,255,255,.1);color:white}.web-detail-actions .primary{background:var(--cyan);color:white}.web-detail-actions .danger{background:rgba(255,78,106,.18);color:#ff9bad}.web-close-btn{width:38px;height:38px;border-radius:14px;border:1px solid var(--line);background:#2a2a30;color:white;cursor:pointer;font-size:20px}@media(max-width:560px){.web-detail-grid{grid-template-columns:1fr}}
 
-Masukkan origins ini dalam Google Cloud Console > OAuth Client ID > Authorized JavaScript origins:
+.cal-nav-actions{display:flex;gap:6px;align-items:center}.cal-nav-actions .mini-btn{min-width:34px;text-align:center}
+.count-box{width:46px;min-height:34px;display:grid;place-items:center;text-align:center;line-height:1;border-radius:10px;background:rgba(255,255,255,.23);border:1px solid rgba(0,0,0,.08);padding:3px 2px}
+.count-num{display:block;font-size:16px;font-weight:900;letter-spacing:-.5px}
+.count-label{display:block;font-size:6.5px;font-weight:900;text-transform:uppercase;margin-top:2px;line-height:.95;opacity:.78}
+.count-box.late{background:rgba(255,255,255,.15)}
+.count-box.done{background:rgba(255,255,255,.18)}
+.web-count{font-size:9px;font-weight:900;opacity:.75;margin-left:auto}
 
-- https://mytask-arkideska.vercel.app
-- https://mytask-arkideska-e5xrvx05o-arkideska.vercel.app
+/* v4.4 smoother mobile calendar scrolling */
+.calendar-drop{
+  scroll-snap-type:x proximity!important;
+  scroll-behavior:smooth!important;
+  overscroll-behavior-x:contain!important;
+  touch-action:pan-x pan-y!important;
+  will-change:scroll-position;
+  padding-bottom:18px!important;
+}
+.month-card{
+  scroll-snap-align:center!important;
+  scroll-snap-stop:normal!important;
+  transform:translateZ(0);
+  backface-visibility:hidden;
+}
+@media(max-width:560px){
+  .calendar-drop.open{
+    gap:12px!important;
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  .month-card{
+    min-width:calc(100vw - 32px)!important;
+  }
+}
 
-Nota:
-- Jangan letak slash `/` di hujung.
-- `mytask-arkideska.vercel.app` ialah production domain yang lebih stabil.
-- URL yang ada kod panjang seperti `e5xrvx05o` biasanya preview/deployment URL dan boleh berubah.
 
-## v1.3 Import Fixed
+/* v4.5 vibrant hue category colours */
+.task-main{
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.16), 0 2px 10px rgba(0,0,0,.08);
+}
+.web-task-chip{
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.14);
+}
 
-- Fixed import JSON daripada versi Apps Script / Google Sheet.
-- Import sekarang merge task terus ke Google Drive JSON database.
-- Settings/category daripada backup turut boleh dibawa masuk.
-- Apps Script tidak digunakan.
 
-## v1.4 Undo + Auto Login
+/* v1.5 AI Planner */
+.ai-planner-card{background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(0,194,255,.08)),rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:28px;padding:20px;box-shadow:var(--shadow)}
+.ai-planner-card h2{margin:0 0 8px;font-size:24px;letter-spacing:-.6px}
+.ai-planner-card p{color:var(--muted);line-height:1.55;margin:0 0 14px;font-size:14px}
+.ai-planner-box{display:grid;gap:10px}
+.ai-planner-box textarea,.ai-modal-grid textarea{width:100%;min-height:115px;resize:vertical;background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:14px;outline:none;line-height:1.45}
+.ai-planner-actions{display:flex;gap:10px;flex-wrap:wrap}
+.ai-planner-actions button{border:0;border-radius:16px;padding:12px 14px;cursor:pointer;font-weight:900}
+.ai-plan-primary{background:var(--cyan);color:white}.ai-plan-soft{background:rgba(255,255,255,.1);color:white}
+.ai-plan-list{display:grid;gap:8px;margin-top:12px}
+.ai-plan-item{background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:11px}
+.ai-plan-item strong{display:block;font-size:13px;margin-bottom:5px}
+.ai-plan-item small{display:block;color:var(--muted);font-weight:800;line-height:1.45}
+.ai-plan-status{color:var(--muted);font-size:12px;font-weight:800}.ai-mobile-open{font-size:15px}.ai-modal-grid{display:grid;gap:12px}
 
-- Tambah button Undo pada mobile header dan desktop actions.
-- Undo menyokong add/edit/delete/toggle done/import/clear completed/settings.
-- Selepas login berjaya, app simpan flag auto-login dalam browser.
-- Bila app dibuka semula, MyTaSK cuba reconnect Google secara senyap.
-- Nota: OAuth browser tidak memberi refresh token kekal. Jika sesi Google tamat, browser block cookies, incognito, atau permission reset, user masih perlu klik Sign in semula.
 
-## v1.5 AI Text Planner
+/* v1.6 ChatGPT Import */
+.chatgpt-import-box{display:grid;gap:10px;margin-top:10px}
+.chatgpt-import-box textarea{width:100%;min-height:130px;resize:vertical;background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:14px;outline:none;line-height:1.45;font-size:13px}
+.chatgpt-import-status{color:var(--muted);font-size:12px;font-weight:800;line-height:1.45}
+.chatgpt-import-actions{display:flex;gap:10px;flex-wrap:wrap}
+.chatgpt-import-actions button{border:0;border-radius:16px;padding:12px 14px;cursor:pointer;font-weight:900}
+.chatgpt-primary{background:var(--cyan);color:white}.chatgpt-soft{background:rgba(255,255,255,.1);color:white}
 
-- Tambah panel AI Planner.
-- User boleh taip arahan kerja dalam ayat biasa.
-- AI pulangkan task, due date, category, priority dan note.
-- User perlu review dan klik `Apply to Calendar`.
-- Tambah Vercel API route `/api/ai-plan-task`.
-- Letakkan API key sebagai Environment Variable di Vercel: `OPENAI_API_KEY`.
-- Optional model override: `OPENAI_MODEL`.
-- Jika `OPENAI_API_KEY` belum diset, app guna fallback planner ringkas.
 
-## v1.6 ChatGPT Import Automate
+/* v1.7 App Designer */
+.designer-grid{display:grid;gap:14px}.designer-section{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:14px}.designer-section h3{margin:0 0 8px;font-size:15px}.designer-row{display:grid;grid-template-columns:90px 1fr;gap:10px;align-items:center;padding:8px 0;border-top:1px solid rgba(255,255,255,.07)}.designer-row:first-of-type{border-top:0}.designer-row label{font-size:12px;color:var(--muted);font-weight:900}.designer-row input[type="text"]{width:100%;background:rgba(255,255,255,.08);color:var(--text);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:9px 10px;outline:none}.designer-toggle{display:flex;align-items:center;gap:8px;color:var(--text);font-size:13px;font-weight:900}.designer-note{font-size:12px;color:var(--muted);line-height:1.5}.designer-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.designer-actions button{border:0;border-radius:15px;padding:11px 14px;font-weight:900;cursor:pointer}.designer-primary{background:var(--cyan);color:white}.designer-soft{background:rgba(255,255,255,.1);color:white}.designer-danger{background:rgba(255,78,106,.18);color:#ff9bad}.hidden-by-designer{display:none!important}
 
-- Tambah modal `Import from ChatGPT`.
-- Boleh paste JSON terus daripada ChatGPT.
-- Ada button `Paste from Clipboard`.
-- Tidak perlu upload fail JSON secara manual.
-- Sokong format:
-  - `{"tasks":[...]}`
-  - `[...]`
-  - fenced code block ```json ... ```
-- Task terus apply ke calendar dan save ke Google Drive.
+</style>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<link rel="manifest" href="/manifest.webmanifest">
+</head><body><main class="app-shell"><section class="app-frame web-mode"><div class="statusbar"><span id="clock">12:00</span><span class="brand-mark">a r k i d e S K a</span></div><div class="screen"><div class="auth-screen" id="authScreen"><div class="auth-card"><div class="auth-logo">MT</div><h1>MyTaSK</h1><p>Sign in dengan Google untuk simpan task dalam Google Drive anda dan sync di semua device.</p><button class="google-btn" id="googleLoginBtn" onclick="loginWithGoogle()">Sign in with Google</button><div class="auth-error" id="authError"></div></div></div><div class="header"><div class="top-row"><div class="title-block"><small id="todayText">Today</small><h1 id="appTitle">MyTaSK</h1><div class="sync-dot" id="syncStatus">Not signed in</div></div><div class="icon-row"><button class="icon-btn" onclick="undoLastAction()" title="Undo">↶</button><button class="icon-btn ai-mobile-open" onclick="openAIPlanner()" title="AI Planner">🤖</button><button class="icon-btn" onclick="toggleCalendar()" title="Calendar View">▦</button><button class="icon-btn" onclick="openDesigner()" title="Designer">✎</button><button class="icon-btn" onclick="openSettings()" title="Settings">⚙</button></div></div><div class="date-strip" id="dateStrip"></div></div><div class="calendar-drop" id="calendarDrop"></div><form class="quick-add" onsubmit="addTask(event)"><input id="quickTaskTitle" placeholder="Type new task here..." autocomplete="off"/><button class="add-btn" type="submit">+</button></form><div class="task-area" id="taskArea"></div><div class="floating-footer"><div class="footer-bar"><button class="tab active" id="tabToday" onclick="setView('today')">Today</button><button class="tab" id="tabWeek" onclick="setView('week')">Week</button><button class="tab" id="tabMonth" onclick="setView('month')">Month</button><button class="tab" id="tabAll" onclick="setView('all')">All</button></div></div></div></section><aside class="desktop-panel"><div class="web-calendar-card" id="webCalendarCard"><div class="web-topbar"><div class="web-brand"><h1>MyTaSK</h1><div class="brand-small">a r k i d e S K a</div></div><div class="web-actions"><input id="webQuickTaskTitle" placeholder="Type new task here..." onkeydown="if(event.key==='Enter'){event.preventDefault();addWebTask();}"/><select id="webDefaultCategory"></select><button class="web-add-btn" onclick="addWebTask()">+ Add Task</button></div></div><div id="webAuthBox" class="web-empty-auth">Sign in dengan Google untuk buka paparan web calendar.<br><button onclick="loginWithGoogle()">Sign in with Google</button></div><div id="webCalendarContent" style="display:none;"><div class="web-calendar-head"><div class="web-calendar-title" id="webCalendarTitle">Month Year</div><div class="web-calendar-controls"><button onclick="moveWebMonth(-1)">← Month</button><button onclick="selectToday()">Today</button><button onclick="moveWebMonth(1)">Month →</button></div></div><div class="web-calendar-grid" id="webCalendarGrid"></div><div class="web-task-list-panel"><h2 id="webSelectedTitle">Selected Date</h2><div class="web-selected-tasks" id="webSelectedTasks"></div></div></div></div><div class="side-card sync-card"><h2>MyTaSK Sync</h2><p>Data disimpan dalam Google Drive sebagai fail JSON peribadi. Warna card auto ikut Category. Calendar boleh scroll kiri/kanan. Long press task untuk reorder. Swipe kanan untuk finish / COMPLETED, swipe kiri untuk move today bila overdue.</p><p style="margin-top:10px;">Account: <strong id="userEmail">Not signed in</strong><br>Database: <a class="db-link" id="dbLink" href="#" target="_blank">Open Google Drive File</a></p><div class="stats"><div class="stat"><div class="stat-num" id="statTotal">0</div><div class="stat-label">Total</div></div><div class="stat"><div class="stat-num" id="statDone">0</div><div class="stat-label">Done</div></div><div class="stat"><div class="stat-num" id="statToday">0</div><div class="stat-label">Today</div></div><div class="stat"><div class="stat-num" id="statOVERDUE">0</div><div class="stat-label">OVERDUE</div></div></div></div>
+<div class="side-card ai-planner-card">
+  <h2>🤖 AI Planner</h2>
+  <p>Ceritakan kerja kau dalam ayat biasa. AI akan pecahkan kepada task, cadang due date, kategori dan susun ikut priority.</p>
+  <div class="ai-planner-box">
+    <textarea id="aiInstruction" placeholder="Contoh: Minggu ni aku kena siapkan slide shading, update website kolej, submit laporan KPI Jumaat, dan sambung draft tesis chapter 2. Susun ikut priority."></textarea>
+    <div class="ai-planner-actions">
+      <button class="ai-plan-primary" onclick="generateAIPlan()">Generate Plan</button>
+      <button class="ai-plan-soft" onclick="applyAIPlan()">Apply to Calendar</button>
+      <button class="ai-plan-soft" onclick="clearAIPlan()">Clear</button><button class="ai-plan-soft" onclick="openChatGPTImport()">Import from ChatGPT</button>
+    </div>
+    <div class="ai-plan-status" id="aiPlanStatus">AI Planner ready.</div>
+    <div class="ai-plan-list" id="aiPlanPreview"></div>
+  </div>
+</div>
+<div class="side-card settings-card"><h2>Settings & Filter</h2><p>Filter kategori, cari task, edit dropdown item dan backup.</p><div class="settings-grid"><div class="setting-field"><label>Default Category</label><select id="defaultCategory"></select></div><div class="setting-field"><label>Filter Category</label><select id="filterCategory" onchange="render()"></select></div><div class="setting-field" style="grid-column:1/-1;"><label>Search</label><input id="searchTask" placeholder="Search task..." oninput="render()"/></div></div><div class="side-actions"><button class="primary-side" onclick="focusInput()">+ Add Task</button><button class="soft-side" onclick="undoLastAction()">Undo</button><button class="soft-side" onclick="openDesigner()">Designer</button><button class="soft-side" onclick="openSettings()">Edit Dropdown</button><button class="soft-side" onclick="reloadFromSheet()">Reload</button><button class="soft-side" onclick="exportData()">Export</button><button class="soft-side" onclick="document.getElementById('importFile').click()">Import</button><button class="danger-side" onclick="clearCompleted()">Clear Done</button><input id="importFile" type="file" accept=".json" hidden onchange="importData(event)"/></div></div></aside></main>
+  <div class="web-detail-modal" id="webTaskModal">
+    <div class="web-detail-card">
+      <div class="web-detail-head">
+        <div>
+          <h2>Edit Task</h2>
+          <p>Detail ini khusus untuk paparan website. Fungsi sama seperti mobile view.</p>
+        </div>
+        <button class="web-close-btn" onclick="closeWebTaskDetail()">×</button>
+      </div>
+      <div id="webTaskDetailBody"></div>
+    </div>
+  </div>
+
+  
+
+<div class="modal-backdrop" id="chatGPTImportModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h2>Import from ChatGPT</h2>
+        <p>Copy JSON task daripada ChatGPT, paste di sini, kemudian apply terus ke MyTaSK Calendar tanpa upload fail.</p>
+      </div>
+      <button class="close-btn" onclick="closeChatGPTImport()">×</button>
+    </div>
+    <div class="chatgpt-import-box">
+      <textarea id="chatGPTImportText" placeholder='Paste JSON di sini. Contoh: {"tasks":[{"title":"Siapkan slide shading","due":"2026-07-16","category":"PdP / Kelas","priority":"High","note":"Untuk kelas rendering"}]}'></textarea>
+      <div class="chatgpt-import-actions">
+        <button class="chatgpt-primary" onclick="pasteChatGPTClipboard()">Paste from Clipboard</button>
+        <button class="chatgpt-primary" onclick="applyChatGPTImport()">Apply to Calendar</button>
+        <button class="chatgpt-soft" onclick="previewChatGPTImport()">Preview</button>
+        <button class="chatgpt-soft" onclick="clearChatGPTImport()">Clear</button>
+      </div>
+      <div class="chatgpt-import-status" id="chatGPTImportStatus">Ready. Format disokong: array task atau object {"tasks":[...]}.</div>
+      <div class="ai-plan-list" id="chatGPTImportPreview"></div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="aiPlannerModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div><h2>🤖 AI Planner</h2><p>Untuk v1.5 ini, guna text dahulu. Voice akan masuk fasa berikutnya.</p></div>
+      <button class="close-btn" onclick="closeAIPlanner()">×</button>
+    </div>
+    <div class="ai-modal-grid">
+      <textarea id="aiInstructionMobile" placeholder="Contoh: Esok siapkan bahan kelas, Jumaat submit KPI, minggu depan sambung thesis. Susun ikut priority."></textarea>
+      <div class="ai-planner-actions">
+        <button class="ai-plan-primary" onclick="generateAIPlan(true)">Generate Plan</button>
+        <button class="ai-plan-soft" onclick="applyAIPlan()">Apply</button>
+        <button class="ai-plan-soft" onclick="clearAIPlan()">Clear</button><button class="ai-plan-soft" onclick="openChatGPTImport()">Import ChatGPT</button>
+      </div>
+      <div class="ai-plan-status" id="aiPlanStatusMobile">AI Planner ready.</div>
+      <div class="ai-plan-list" id="aiPlanPreviewMobile"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="designerModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div><h2>App Designer</h2><p>Organise paparan MyTaSK tanpa edit kod. Hide/show item dan tukar label button ikut style kau.</p></div>
+      <button class="close-btn" onclick="closeDesigner()">×</button>
+    </div>
+    <div class="designer-grid" id="designerPanel"></div>
+    <div class="designer-actions">
+      <button class="designer-primary" onclick="saveDesignerSettings()">Save Designer</button>
+      <button class="designer-soft" onclick="collectDesignerSettings();applyDesignerSettings()">Preview Apply</button>
+      <button class="designer-danger" onclick="resetDesignerSettings()">Reset Default</button>
+      <button class="designer-soft" onclick="closeDesigner()">Close</button>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="settingsModal"><div class="modal"><div class="modal-head"><div><h2>MyTaSK Settings</h2><p>Edit item dropdown. Warna card kini auto-generate ikut Category menggunakan vibrant hue colours dan boleh support lebih 20 warna tanpa setting manual.</p></div><button class="close-btn" onclick="closeSettings()">×</button></div><div class="settings-grid"><div class="setting-field" style="grid-column:1/-1;"><label>Category Dropdown</label><textarea id="settingsCategories"></textarea></div></div><div class="side-actions"><button class="primary-side" onclick="saveSettingsFromModal()">Save Settings</button><button class="soft-side" onclick="resetDefaultSettings()">Reset Default</button><button class="danger-side" onclick="closeSettings()">Cancel</button></div></div></div><script>
+
+const defaultUIDesigner={mobileActions:{undo:{show:true,label:"↶"},ai:{show:true,label:"🤖"},calendar:{show:true,label:"▦"},designer:{show:true,label:"✎"},settings:{show:true,label:"⚙"}},bottomTabs:{today:{show:true,label:"Today"},week:{show:true,label:"Week"},month:{show:true,label:"Month"},all:{show:true,label:"All"}},desktopActions:{add:{show:true,label:"+ Add Task"},undo:{show:true,label:"Undo"},designer:{show:true,label:"Designer"},dropdown:{show:true,label:"Edit Dropdown"},reload:{show:true,label:"Reload"},export:{show:true,label:"Export"},import:{show:true,label:"Import"},clear:{show:true,label:"Clear Done"}},cards:{sync:{show:true,label:"MyTaSK Sync"},ai:{show:true,label:"AI Planner"},settings:{show:true,label:"Settings & Filter"}}};
+function mergeUIDesigner(input){const base=JSON.parse(JSON.stringify(defaultUIDesigner));const src=input||{};Object.keys(base).forEach(g=>Object.keys(base[g]).forEach(k=>{if(src[g]&&src[g][k])base[g][k]=Object.assign({},base[g][k],src[g][k])}));return base}
+function getUIDesigner(){appSettings.uiDesigner=mergeUIDesigner(appSettings.uiDesigner||{});return appSettings.uiDesigner}
+function findButtonByOnclick(txt){return Array.from(document.querySelectorAll("button")).filter(b=>(b.getAttribute("onclick")||"").includes(txt))}
+function setBtn(btn,cfg){if(!btn||!cfg)return;btn.classList.toggle("hidden-by-designer",!cfg.show);if(cfg.label)btn.textContent=cfg.label}
+function applyDesignerSettings(){const ui=getUIDesigner();[["undo","undoLastAction"],["ai","openAIPlanner"],["calendar","toggleCalendar"],["designer","openDesigner"],["settings","openSettings"]].forEach(([k,o])=>findButtonByOnclick(o).forEach(b=>{if(b.closest(".icon-row"))setBtn(b,ui.mobileActions[k])}));[["today","tabToday"],["week","tabWeek"],["month","tabMonth"],["all","tabAll"]].forEach(([k,id])=>{const b=document.getElementById(id);if(b)setBtn(b,ui.bottomTabs[k])});[["add","focusInput"],["undo","undoLastAction"],["designer","openDesigner"],["dropdown","openSettings"],["reload","reloadFromSheet"],["export","exportData"],["clear","clearCompleted"]].forEach(([k,o])=>findButtonByOnclick(o).forEach(b=>{if(b.closest(".side-actions"))setBtn(b,ui.desktopActions[k])}));const imp=Array.from(document.querySelectorAll(".side-actions button")).find(b=>(b.textContent||"").trim().toLowerCase().includes("import"));if(imp)setBtn(imp,ui.desktopActions.import);const sync=document.querySelector(".sync-card");if(sync){sync.classList.toggle("hidden-by-designer",!ui.cards.sync.show);const h=sync.querySelector("h2");if(h)h.textContent=ui.cards.sync.label}const ai=document.querySelector(".ai-planner-card");if(ai){ai.classList.toggle("hidden-by-designer",!ui.cards.ai.show);const h=ai.querySelector("h2");if(h)h.textContent=ui.cards.ai.label}const set=document.querySelector(".settings-card");if(set){set.classList.toggle("hidden-by-designer",!ui.cards.settings.show);const h=set.querySelector("h2");if(h)h.textContent=ui.cards.settings.label}}
+function openDesigner(){buildDesignerPanel();document.getElementById("designerModal").classList.add("open")}
+function closeDesigner(){document.getElementById("designerModal").classList.remove("open")}
+function buildDesignerPanel(){const p=document.getElementById("designerPanel");if(!p)return;const ui=getUIDesigner();const groups=[["mobileActions","Mobile Top Buttons"],["bottomTabs","Mobile Bottom Tabs"],["desktopActions","Desktop Action Buttons"],["cards","Feature Cards"]];p.innerHTML=groups.map(([g,t])=>`<section class="designer-section"><h3>${t}</h3>`+Object.keys(ui[g]).map(k=>{const it=ui[g][k],id=`designer_${g}_${k}`;return `<div class="designer-row"><label>${k}</label><div><div class="designer-toggle"><input type="checkbox" id="${id}_show" ${it.show?"checked":""}><span>Show</span></div><input type="text" id="${id}_label" value="${escapeHTML(it.label||"")}" placeholder="Label"></div></div>`}).join("")+`</section>`).join("")+`<div class="designer-note">Nota: v1.7 ini fokus hide/show dan tukar label. Drag-and-drop susunan penuh boleh dibuat kemudian sebagai v1.8.</div>`}
+function collectDesignerSettings(){const ui=getUIDesigner();Object.keys(ui).forEach(g=>Object.keys(ui[g]).forEach(k=>{const id=`designer_${g}_${k}`;const s=document.getElementById(`${id}_show`),l=document.getElementById(`${id}_label`);if(s)ui[g][k].show=s.checked;if(l)ui[g][k].label=l.value.trim()||defaultUIDesigner[g][k].label}));appSettings.uiDesigner=ui;return ui}
+async function saveDesignerSettings(){collectDesignerSettings();applyDesignerSettings();try{if(isSignedIn&&driveFileId){setSync("Saving designer...","saving");await uploadDriveDatabase({version:"mytask-vercel-edition-v1.7",updatedAt:new Date().toISOString(),settings:appSettings,tasks:tasks});setSync("Synced","")}alert("Designer settings saved.");closeDesigner()}catch(e){console.error(e);setSync("Designer save error","error");alert("Designer setting gagal save.")}}
+function resetDesignerSettings(){if(!confirm("Reset semua designer settings kepada default?"))return;appSettings.uiDesigner=JSON.parse(JSON.stringify(defaultUIDesigner));buildDesignerPanel();applyDesignerSettings()}
+
+const defaultSettings={appName:"MyTaSK",categories:["General","PdP / Kelas","CCMS / Peperiksaan","Website Kolej","HLP / PhD / UPM","KPI / Laporan","Meeting","Personal"],colorLabels:{c1:"Lime",c2:"Orange",c3:"Purple",c4:"Green",c5:"Beige",c6:"Red",c7:"Blue",c8:"Pink",c9:"Yellow",c10:"Grey"}};const monthNames=["January","February","March","April","May","June","July","August","September","October","November","December"];const shortMonths=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];const dayNames=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];const calendarDayNames=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];const colors=["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"];let tasks=[];let appSettings=JSON.parse(JSON.stringify(defaultSettings));let selectedDate=toISO(new Date());let calendarMonth=new Date();let view="today";let openIds=new Set();let saveTimers={};let isSignedIn=false;let draggedId=null;
+let undoStack=[];
+const MAX_UNDO=25;
+
+function snapshotState(label){
+  return {
+    label: label || "Change",
+    tasks: JSON.parse(JSON.stringify(tasks || [])),
+    settings: JSON.parse(JSON.stringify(appSettings || defaultSettings)),
+    selectedDate: selectedDate,
+    calendarMonth: calendarMonth ? calendarMonth.toISOString() : new Date().toISOString(),
+    view: view
+  };
+}
+
+function pushUndo(label){
+  try{
+    undoStack.push(snapshotState(label));
+    if(undoStack.length>MAX_UNDO) undoStack.shift();
+    updateUndoButtons();
+  }catch(err){
+    console.warn("Undo snapshot failed", err);
+  }
+}
+
+function updateUndoButtons(){
+  document.querySelectorAll('[onclick="undoLastAction()"]').forEach(btn=>{
+    btn.disabled = undoStack.length===0;
+    btn.style.opacity = undoStack.length===0 ? ".45" : "1";
+  });
+}
+
+async function undoLastAction(){
+  if(!undoStack.length){
+    alert("Tiada tindakan untuk undo.");
+    return;
+  }
+  const snap = undoStack.pop();
+  tasks = (snap.tasks || []).map(normalizeTask);
+  appSettings = normalizeSettings(snap.settings || defaultSettings);
+  selectedDate = snap.selectedDate || toISO(new Date());
+  calendarMonth = new Date(snap.calendarMonth || new Date());
+  view = snap.view || "today";
+  openIds.clear();
+  syncAllTaskColorsByCategory();
+  renderDropdownSettings();
+  render();
+  updateUndoButtons();
+  try{
+    if(isSignedIn && driveFileId){
+      setSync("Undo saving...","saving");
+      await uploadDriveDatabase({
+        version: "mytask-vercel-edition-v1.7",
+        updatedAt: new Date().toISOString(),
+        settings: appSettings,
+        tasks: tasks
+      });
+      setSync("Undo saved","");
+    }
+  }catch(err){
+    console.error(err);
+    setSync("Undo save error","error");
+  }
+}
+
+async function attemptSilentLogin(){
+  if(localStorage.getItem("mytask_auto_login")!=="1") return;
+  if(isSignedIn) return;
+  try{
+    setSync("Reconnecting...","saving");
+    const data = await signInAndLoad("none");
+    applyBootstrapData(data);
+    document.getElementById("authScreen").classList.add("hidden");
+    const webAuth=document.getElementById("webAuthBox");
+    const webContent=document.getElementById("webCalendarContent");
+    if(webAuth)webAuth.style.display="none";
+    if(webContent)webContent.style.display="block";
+    isSignedIn=true;
+    setSync("Synced","");
+    render();
+  }catch(err){
+    console.warn("Silent login skipped", err);
+    setSync("Tap Sign in","");
+  }
+}
+
+const MYTASK_CONFIG = {
+  // WAJIB GANTI: Google OAuth Web Client ID dari Google Cloud Console
+  CLIENT_ID: "472270716031-uihmn2f04to3lmqk1is0r76a876723ir.apps.googleusercontent.com", // MyTaSK OAuth Client ID
+  DISCOVERY_DOC: "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest",
+  SCOPES: "https://www.googleapis.com/auth/drive.file",
+  DB_FILE_NAME: "MyTaSK Database.json"
+};
+
+let tokenClient = null;
+let accessToken = "";
+let driveFileId = "";
+let driveFileUrl = "";
+let googleUserEmail = "";
+
+function isClientIdReady(){
+  return MYTASK_CONFIG.CLIENT_ID &&
+    MYTASK_CONFIG.CLIENT_ID.includes(".apps.googleusercontent.com") &&
+    MYTASK_CONFIG.CLIENT_ID.length > 30;
+}
+
+function showConfigError(){
+  const errBox=document.getElementById("authError");
+  if(errBox){
+    errBox.innerHTML = "Google Client ID belum diset. Buka <b>index.html</b>, cari <code>472270716031-uihmn2f04to3lmqk1is0r76a876723ir.apps.googleusercontent.com</code>, dan ganti dengan Client ID sebenar.";
+    errBox.classList.add("show");
+  }
+  setSync("Setup needed","error");
+}
+
+
+function formatGoogleError(err){
+  try{
+    if(!err) return "Unknown error.";
+    if(typeof err === "string") return err;
+    const parts = [];
+    if(err.error) parts.push("error: " + err.error);
+    if(err.details) parts.push("details: " + err.details);
+    if(err.message) parts.push("message: " + err.message);
+    if(err.status) parts.push("status: " + err.status);
+    if(err.result && err.result.error){
+      if(err.result.error.message) parts.push("api: " + err.result.error.message);
+      if(err.result.error.status) parts.push("api_status: " + err.result.error.status);
+      if(err.result.error.code) parts.push("api_code: " + err.result.error.code);
+    }
+    if(parts.length) return parts.join(" | ");
+    return JSON.stringify(err);
+  }catch(e){
+    return "Unable to read error details.";
+  }
+}
+
+function showLoginError(err){
+  const errBox=document.getElementById("authError");
+  const detail = formatGoogleError(err);
+  if(errBox){
+    const safeDetail = detail.replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[s]));
+    errBox.innerHTML =
+      "Login gagal.<br><br><b>Detail error:</b><br>" +
+      "<code style='white-space:normal;display:block;text-align:left;line-height:1.4;'>" + safeDetail + "</code><br>" +
+      "Semak: Client ID, Authorized JavaScript origins, Test users, dan Google Drive API.";
+    errBox.classList.add("show");
+  }
+}
+
+function serverCall(functionName,...args){
+  // Compatibility placeholder. Vercel Edition does not use Apps Script runtime.
+  const handlers = {
+    signInAndLoad: signInAndLoad,
+    getTasks: async()=>tasks,
+    saveTask: async(task)=>{ await upsertTaskToDrive(task); return task; },
+    saveTaskOrder: async(order)=>{ await saveOrderToDrive(order); return true; },
+    deleteTask: async(id)=>{ await deleteTaskFromDrive(id); return true; },
+    clearCompletedTasks: async()=>{ await clearCompletedFromDrive(); return true; },
+    saveSettings: async(settings)=>{ await saveSettingsToDrive(settings); return true; }
+  };
+  if(!handlers[functionName]) return Promise.reject(new Error("Unknown function: "+functionName));
+  return handlers[functionName](...args);
+}
+
+async function waitForGoogleLibs(){
+  const start = Date.now();
+  while(!(window.google && google.accounts && google.accounts.oauth2 && window.gapi)){
+    if(Date.now() - start > 10000) throw new Error("Google libraries failed to load.");
+    await new Promise(r=>setTimeout(r,100));
+  }
+}
+
+async function initGoogleClients(){
+  if(!isClientIdReady()){
+    showConfigError();
+    throw new Error("Missing Google OAuth Client ID");
+  }
+  await waitForGoogleLibs();
+  await new Promise((resolve,reject)=>{
+    gapi.load("client", async ()=>{
+      try{
+        await gapi.client.init({discoveryDocs:[MYTASK_CONFIG.DISCOVERY_DOC]});
+        resolve();
+      }catch(err){ reject(err); }
+    });
+  });
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: MYTASK_CONFIG.CLIENT_ID,
+    scope: MYTASK_CONFIG.SCOPES,
+    callback: ""
+  });
+}
+
+async function requestAccessToken(promptMode="consent"){
+  if(!tokenClient) await initGoogleClients();
+  return new Promise((resolve,reject)=>{
+    tokenClient.callback = async (resp)=>{
+      if(resp.error){ reject(resp); return; }
+      accessToken = resp.access_token;
+      gapi.client.setToken({access_token: accessToken});
+      resolve(resp);
+    };
+    tokenClient.requestAccessToken({prompt: promptMode==="none" ? "" : promptMode});
+  });
+}
+
+async function fetchUserEmail(){
+  try{
+    const res = await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
+      headers: { Authorization: "Bearer " + accessToken }
+    });
+    if(!res.ok) return "Signed-in Google user";
+    const data = await res.json();
+    googleUserEmail = data.email || "Signed-in Google user";
+    return googleUserEmail;
+  }catch(e){
+    return "Signed-in Google user";
+  }
+}
+
+function defaultDatabase(){
+  return {
+    version: "mytask-vercel-edition-v1.7.3",
+    updatedAt: new Date().toISOString(),
+    settings: JSON.parse(JSON.stringify(defaultSettings)),
+    tasks: []
+  };
+}
+
+async function findDriveDatabaseFile(){
+  const q = "name = '" + MYTASK_CONFIG.DB_FILE_NAME.replace(/'/g,"\\'") + "' and trashed = false";
+  const res = await gapi.client.drive.files.list({
+    q,
+    spaces: "drive",
+    fields: "files(id,name,webViewLink,modifiedTime)",
+    pageSize: 10
+  });
+  const files = (res.result && res.result.files) || [];
+  return files[0] || null;
+}
+
+async function createDriveDatabaseFile(){
+  const metadata = {
+    name: MYTASK_CONFIG.DB_FILE_NAME,
+    mimeType: "application/json"
+  };
+  const fileContent = JSON.stringify(defaultDatabase(), null, 2);
+  const boundary = "mytask_boundary_" + Date.now();
+  const delimiter = "\r\n--" + boundary + "\r\n";
+  const closeDelim = "\r\n--" + boundary + "--";
+  const multipartRequestBody =
+    delimiter +
+    "Content-Type: application/json; charset=UTF-8\r\n\r\n" +
+    JSON.stringify(metadata) +
+    delimiter +
+    "Content-Type: application/json\r\n\r\n" +
+    fileContent +
+    closeDelim;
+
+  const res = await gapi.client.request({
+    path: "/upload/drive/v3/files",
+    method: "POST",
+    params: { uploadType: "multipart", fields: "id,name,webViewLink" },
+    headers: { "Content-Type": "multipart/related; boundary=" + boundary },
+    body: multipartRequestBody
+  });
+  return res.result;
+}
+
+async function downloadDriveDatabase(){
+  const res = await gapi.client.drive.files.get({
+    fileId: driveFileId,
+    alt: "media"
+  });
+  if(typeof res.body === "string"){
+    try { return JSON.parse(res.body); } catch(e) { return defaultDatabase(); }
+  }
+  return res.result || defaultDatabase();
+}
+
+async function uploadDriveDatabase(db){
+  db.updatedAt = new Date().toISOString();
+  const body = JSON.stringify(db, null, 2);
+  const res = await gapi.client.request({
+    path: "/upload/drive/v3/files/" + encodeURIComponent(driveFileId),
+    method: "PATCH",
+    params: { uploadType: "media" },
+    headers: { "Content-Type": "application/json" },
+    body
+  });
+  return res.result;
+}
+
+async function ensureDatabaseFile(){
+  let file = await findDriveDatabaseFile();
+  if(!file) file = await createDriveDatabaseFile();
+  driveFileId = file.id;
+  driveFileUrl = file.webViewLink || ("https://drive.google.com/file/d/" + file.id + "/view");
+  const dbLink = document.getElementById("dbLink");
+  if(dbLink) dbLink.href = driveFileUrl;
+  return file;
+}
+
+async function signInAndLoad(authPrompt="consent"){
+  await initGoogleClients();
+  await requestAccessToken(authPrompt);
+  const email = await fetchUserEmail();
+  await ensureDatabaseFile();
+  const db = await downloadDriveDatabase();
+  return {
+    userEmail: email,
+    spreadsheetUrl: driveFileUrl,
+    settings: db.settings || defaultSettings,
+    tasks: db.tasks || []
+  };
+}
+
+let driveSaveTimer = null;
+async function saveDatabaseSoon(){
+  if(!accessToken || !driveFileId) return;
+  clearTimeout(driveSaveTimer);
+  driveSaveTimer = setTimeout(async ()=>{
+    try{
+      setSync("Saving...","saving");
+      const db = {
+        version: "mytask-vercel-edition-v1.7.3",
+        updatedAt: new Date().toISOString(),
+        settings: appSettings,
+        tasks: tasks
+      };
+      await uploadDriveDatabase(db);
+      setSync("Synced","");
+    }catch(err){
+      console.error(err);
+      setSync("Drive save error","error");
+    }
+  }, 500);
+}
+
+async function upsertTaskToDrive(task){
+  const idx = tasks.findIndex(t=>t.id===task.id);
+  if(idx>=0) tasks[idx]=normalizeTask(task);
+  else tasks.push(normalizeTask(task));
+  await saveDatabaseSoon();
+  return task;
+}
+
+async function saveOrderToDrive(order){
+  order.forEach(item=>{
+    const t = tasks.find(x=>x.id===item.id);
+    if(t) t.sortOrder = item.sortOrder;
+  });
+  await saveDatabaseSoon();
+}
+
+async function deleteTaskFromDrive(id){
+  tasks = tasks.filter(t=>t.id!==id);
+  await saveDatabaseSoon();
+}
+
+async function clearCompletedFromDrive(){
+  tasks = tasks.filter(t=>!t.done);
+  await saveDatabaseSoon();
+}
+
+async function saveSettingsToDrive(settings){
+  appSettings = normalizeSettings(settings);
+  syncAllTaskColorsByCategory();
+  await saveDatabaseSoon();
+}
+
+async function loginWithGoogle(){const btn=document.getElementById("googleLoginBtn");const errBox=document.getElementById("authError");btn.disabled=true;btn.textContent="Signing in...";errBox.classList.remove("show");errBox.textContent="";setSync("Signing in...","saving");try{const data=await serverCall("signInAndLoad");applyBootstrapData(data);document.getElementById("authScreen").classList.add("hidden");const webAuth=document.getElementById("webAuthBox");const webContent=document.getElementById("webCalendarContent");if(webAuth)webAuth.style.display="none";if(webContent)webContent.style.display="block";isSignedIn=true;localStorage.setItem("mytask_auto_login","1");setSync("Synced","");render();updateUndoButtons()}catch(err){console.error(err);btn.disabled=false;btn.textContent="Sign in with Google";setSync("Login error","error");showLoginError(err)}}function applyBootstrapData(data){appSettings=normalizeSettings(data.settings||defaultSettings);tasks=(data.tasks||[]).map(normalizeTask);syncAllTaskColorsByCategory();document.getElementById("appTitle").textContent="MyTaSK";document.getElementById("userEmail").textContent=data.userEmail||"Signed-in Google user";document.getElementById("dbLink").href=data.spreadsheetUrl||"#";renderDropdownSettings()}function normalizeSettings(settings){return{appName:"MyTaSK",categories:cleanList(settings.categories,defaultSettings.categories),colorLabels:Object.assign({},defaultSettings.colorLabels,settings.colorLabels||{}),uiDesigner:mergeUIDesigner(settings.uiDesigner||{})}}function cleanList(list,fallback){if(!Array.isArray(list))return fallback;const cleaned=[...new Set(list.map(x=>String(x||"").trim()).filter(Boolean))];return cleaned.length?cleaned:fallback}function normalizeTask(task){return{id:task.id||uid(),title:task.title||"Untitled Task",due:task.due||task.date||toISO(new Date()),time:task.time||"",category:task.category||appSettings.categories[0]||"General",note:task.note||"",done:Boolean(task.done),color:categoryColor(task.category||appSettings.categories[0]||"General"),sortOrder:Number(task.sortOrder||Date.now()),createdAt:task.createdAt||new Date().toISOString(),updatedAt:task.updatedAt||new Date().toISOString()}}function toISO(date){const y=date.getFullYear();const m=String(date.getMonth()+1).padStart(2,"0");const d=String(date.getDate()).padStart(2,"0");return `${y}-${m}-${d}`}function fromISO(iso){return new Date(iso+"T00:00:00")}function addDays(iso,days){const d=fromISO(iso);d.setDate(d.getDate()+days);return toISO(d)}function uid(){return crypto.randomUUID?crypto.randomUUID():String(Date.now()+Math.random())}function escapeHTML(str){return String(str||"").replace(/[&<>"']/g,s=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[s]))}function updateClock(){const now=new Date();document.getElementById("clock").textContent=`${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}`;document.getElementById("todayText").textContent=`Today, ${now.getDate()} ${shortMonths[now.getMonth()]}`}function setSync(text,mode){const el=document.getElementById("syncStatus");el.textContent=text;el.className="sync-dot "+(mode||"")}function saveTaskToSheet(task,debounce=true){
+  if(!isSignedIn)return;
+  setSync("Saving...","saving");
+  const runSave=async()=>{
+    try{
+      await upsertTaskToDrive(task);
+      setSync("Synced","");
+    }catch(err){
+      setSync("Save error","error");
+      console.error(err);
+    }
+  };
+  if(!debounce){runSave();return}
+  clearTimeout(saveTimers[task.id]);
+  saveTimers[task.id]=setTimeout(runSave,550);
+}
+async function saveOrderToSheet(){
+  if(!isSignedIn)return;
+  try{
+    setSync("Saving order...","saving");
+    await saveOrderToDrive(tasks.map(t=>({id:t.id,sortOrder:t.sortOrder})));
+    setSync("Synced","");
+  }catch(err){
+    setSync("Order save error","error");
+    console.error(err);
+  }
+}
+async function reloadFromSheet(){
+  try{
+    setSync("Reloading...","saving");
+    const db = await downloadDriveDatabase();
+    appSettings = normalizeSettings(db.settings || defaultSettings);
+    tasks = (db.tasks || []).map(normalizeTask);
+    syncAllTaskColorsByCategory();
+    renderDropdownSettings();
+    setSync("Synced","");
+    render();
+  }catch(err){
+    setSync("Reload error","error");
+    alert("Gagal reload dari Google Drive.");
+  }
+}
+function renderDropdownSettings(){const defaultCategory=document.getElementById("defaultCategory");const filterCategory=document.getElementById("filterCategory");defaultCategory.innerHTML=appSettings.categories.map(c=>`<option>${escapeHTML(c)}</option>`).join("");filterCategory.innerHTML=`<option value="">All categories</option>`+appSettings.categories.map(c=>`<option>${escapeHTML(c)}</option>`).join("")}function renderDateStrip(){const strip=document.getElementById("dateStrip");strip.innerHTML="";const base=fromISO(selectedDate);const start=new Date(base);const mondayOffset=(base.getDay()+6)%7;start.setDate(base.getDate()-mondayOffset);for(let i=0;i<7;i++){const d=new Date(start);d.setDate(start.getDate()+i);const iso=toISO(d);const btn=document.createElement("button");btn.type="button";btn.className="date-pill"+(iso===selectedDate?" active":"");btn.onclick=()=>{selectedDate=iso;calendarMonth=fromISO(iso);view="today";render()};btn.innerHTML=`<div class="dow">${calendarDayNames[i]}</div><div class="num">${d.getDate()}</div>`;strip.appendChild(btn)}}function renderCalendarScroller(){const drop=document.getElementById("calendarDrop");drop.innerHTML="";[-1,0,1].forEach(offset=>{const d=new Date(calendarMonth);d.setMonth(d.getMonth()+offset);drop.appendChild(monthCard(d,offset))});setTimeout(()=>{if(drop.classList.contains("open")){const cards=drop.querySelectorAll(".month-card");if(cards[1])cards[1].scrollIntoView({inline:"center",block:"nearest",behavior:"instant"})}},0);drop.onscroll=debounce(()=>{if(!drop.classList.contains("open"))return;if(drop.dataset.touching==="1")return;const cards=[...drop.querySelectorAll(".month-card")];if(!cards.length)return;const center=drop.scrollLeft+drop.clientWidth/2;let nearest=cards[0],dist=Infinity;cards.forEach(card=>{const c=card.offsetLeft+card.offsetWidth/2;const d=Math.abs(center-c);if(d<dist){dist=d;nearest=card}});const offset=Number(nearest.dataset.offset||0);if(offset!==0){calendarMonth.setMonth(calendarMonth.getMonth()+offset);setTimeout(()=>renderCalendarScroller(),90)}},380);drop.ontouchstart=()=>{drop.dataset.touching="1"};drop.ontouchend=()=>{setTimeout(()=>{drop.dataset.touching="0";const cards=[...drop.querySelectorAll(".month-card")];if(!cards.length)return;const center=drop.scrollLeft+drop.clientWidth/2;let nearest=cards[0],dist=Infinity;cards.forEach(card=>{const c=card.offsetLeft+card.offsetWidth/2;const d=Math.abs(center-c);if(d<dist){dist=d;nearest=card}});const offset=Number(nearest.dataset.offset||0);if(offset!==0){calendarMonth.setMonth(calendarMonth.getMonth()+offset);renderCalendarScroller()}else{nearest.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"})}},220)}}function monthCard(monthDate,offset){const wrap=document.createElement("div");wrap.className="month-card";wrap.dataset.offset=offset;wrap.innerHTML=`<div class="cal-head"><div class="cal-title">${monthNames[monthDate.getMonth()]} ${monthDate.getFullYear()}</div><div class="cal-nav-actions"><button class="mini-btn" onclick="event.stopPropagation();moveMobileMonth(-1)">←</button><button class="mini-btn" onclick="event.stopPropagation();selectToday()">Today</button><button class="mini-btn" onclick="event.stopPropagation();moveMobileMonth(1)">→</button></div></div>`;const grid=document.createElement("div");grid.className="calendar-grid";calendarDayNames.forEach(day=>{const div=document.createElement("div");div.className="cal-day-name";div.textContent=day;grid.appendChild(div)});const y=monthDate.getFullYear(),m=monthDate.getMonth();const first=new Date(y,m,1);const start=new Date(first);const mondayOffset=(first.getDay()+6)%7;start.setDate(start.getDate()-mondayOffset);const today=toISO(new Date());for(let i=0;i<42;i++){const d=new Date(start);d.setDate(start.getDate()+i);const iso=toISO(d);const hasTask=tasks.some(t=>t.due===iso);const btn=document.createElement("button");btn.type="button";btn.className="cal-day";if(d.getMonth()!==m)btn.classList.add("other");if(iso===today)btn.classList.add("today");if(iso===selectedDate)btn.classList.add("selected");btn.onclick=()=>{selectedDate=iso;calendarMonth=fromISO(iso);view="today";render()};btn.innerHTML=`${d.getDate()}${hasTask?'<span class="cal-dot"></span>':""}`;grid.appendChild(btn)}wrap.appendChild(grid);return wrap}function debounce(fn,wait){let timeout;return(...args)=>{clearTimeout(timeout);timeout=setTimeout(()=>fn(...args),wait)}}function toggleCalendar(){document.getElementById("calendarDrop").classList.toggle("open");renderCalendarScroller()}function moveMobileMonth(delta){calendarMonth.setMonth(calendarMonth.getMonth()+delta);renderCalendarScroller();setTimeout(()=>{const drop=document.getElementById("calendarDrop");const card=drop&&drop.querySelectorAll(".month-card")[1];if(card)card.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"})},60)}function selectToday(){selectedDate=toISO(new Date());calendarMonth=new Date();view="today";render()}function addTask(e){e.preventDefault();const input=document.getElementById("quickTaskTitle");const title=input.value.trim();if(!title)return;const task={id:uid(),title,due:selectedDate,time:"",category:document.getElementById("defaultCategory")?.value||appSettings.categories[0]||"General",note:"",done:false,color:categoryColor(document.getElementById("defaultCategory")?.value||appSettings.categories[0]||"General"),sortOrder:Date.now(),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()};pushUndo("Add task");tasks.push(task);openIds.add(task.id);input.value="";render();saveTaskToSheet(task,false)}function setView(next){view=next;render()}function getFilteredTasks(){const search=(document.getElementById("searchTask")?.value||"").toLowerCase().trim();const category=document.getElementById("filterCategory")?.value||"";const today=toISO(new Date());const weekEnd=addDays(today,7);const selectedMonth=calendarMonth.getMonth();const selectedYear=calendarMonth.getFullYear();return tasks.filter(t=>{const text=`${t.title} ${t.category} ${t.note}`.toLowerCase();const d=fromISO(t.due);const matchView=view==="today"?t.due===selectedDate||t.due<today:view==="week"?t.due>=today&&t.due<=weekEnd:view==="month"?d.getMonth()===selectedMonth&&d.getFullYear()===selectedYear:true;return matchView&&(!search||text.includes(search))&&(!category||t.category===category)}).sort((a,b)=>{if(a.done!==b.done)return a.done?1:-1;const dateSort=a.due.localeCompare(b.due);if(dateSort!==0)return dateSort;return Number(a.sortOrder||0)-Number(b.sortOrder||0)})}function groupTasks(list){const today=toISO(new Date());const tomorrow=addDays(today,1);const groups=[];if(view==="today"){const selectedTasks=list.filter(t=>t.due===selectedDate);const overdue=list.filter(t=>t.due<today&&!t.done&&t.due!==selectedDate);groups.push({label:selectedDate===today?"TODAY":prettyDate(selectedDate).toUpperCase(),className:"today-label",tasks:selectedTasks});groups.push({label:"OVERDUE",className:"overdue-label",tasks:overdue})}else{const todayTasks=list.filter(t=>t.due===today);const tomorrowTasks=list.filter(t=>t.due===tomorrow);const overdue=list.filter(t=>t.due<today&&!t.done);const upcoming=list.filter(t=>t.due>tomorrow||(t.due<today&&t.done));groups.push({label:"TODAY",className:"today-label",tasks:todayTasks});groups.push({label:"TOMORROW",className:"tomorrow-label",tasks:tomorrowTasks});groups.push({label:"OVERDUE",className:"overdue-label",tasks:overdue});groups.push({label:view==="month"?"THIS MONTH":"UPCOMING",className:"upcoming-label",tasks:upcoming})}return groups.filter(g=>g.tasks.length)}function prettyDate(iso){const d=fromISO(iso);return `${dayNames[d.getDay()]}, ${d.getDate()} ${shortMonths[d.getMonth()]} ${d.getFullYear()}`}function dateLabel(iso){const d=fromISO(iso);const today=toISO(new Date());if(iso===today)return"TODAY";if(iso===addDays(today,1))return"TOMORROW";if(iso<today)return"OVERDUE";return `${d.getDate()} ${shortMonths[d.getMonth()]} ${d.getFullYear()}`}function renderTasks(){const area=document.getElementById("taskArea");const list=getFilteredTasks();const groups=groupTasks(list);area.innerHTML="";if(!groups.length){area.innerHTML=`<div class="task-group"><div class="empty">No task here yet.<br>Choose due date, type task name, then press +.</div></div>`;return}groups.forEach(group=>{const label=document.createElement("div");label.className=`section-label ${group.className}`;label.textContent=String(group.label).toUpperCase();area.appendChild(label);const wrap=document.createElement("div");wrap.className="task-group";wrap.dataset.group=group.label;group.tasks.forEach(task=>wrap.appendChild(taskElement(task)));area.appendChild(wrap)});attachDragAndSwipe()}function cardDateHTML(iso){const d=fromISO(iso);return `<span class="date-box"><span><span class="d">${String(d.getDate()).padStart(2,"0")}</span><span class="m">${shortMonths[d.getMonth()]}</span></span></span>`}function taskLabel(task){if(task.done)return "COMPLETED";return dateLabel(task.due)}function taskElement(task){const card=document.createElement("div");card.className=`task-card ${openIds.has(task.id)?"open":""}`;card.dataset.id=task.id;card.draggable=true;const titleDone=task.done?"done":"";const mainDone=task.done?"done":"";const checked=task.done?"✓":"";card.innerHTML=`<button class="task-main ${task.color||"c1"} ${mainDone}" style="${taskColorStyle(task)}" onclick="toggleOpen('${task.id}')">${cardDateHTML(task.due)}<span class="check" onclick="event.stopPropagation(); toggleDone('${task.id}')">${checked}</span><span><span class="task-title ${titleDone}">${escapeHTML(task.title)}</span><span class="task-meta">${taskLabel(task)} • ${escapeHTML(task.category||"General")}</span></span>${daysToGoHTML(task)}<span class="plus-mini">+</span></button><div class="task-detail"><div class="detail-form"><div><label>Task Name</label><input value="${escapeHTML(task.title)}" oninput="updateTask('${task.id}','title',this.value)"/></div><div class="detail-row"><div><label>Due Date</label><input type="date" value="${escapeHTML(task.due)}" onchange="updateTask('${task.id}','due',this.value,true)"/></div><div><label>Category</label><select onchange="updateTaskCategory('${task.id}', this.value)">${optionHTML(appSettings.categories,task.category||appSettings.categories[0])}</select></div></div><div><label>Detail / Notes</label><textarea placeholder="Add details, checklist, link or follow-up note..." oninput="updateTask('${task.id}','note',this.value)">${escapeHTML(task.note||"")}</textarea></div><div class="detail-actions"><button class="small-action" onclick="moveTaskUp('${task.id}')">Move Up</button><button class="small-action" onclick="moveTaskDown('${task.id}')">Move Down</button><button class="small-action" onclick="duplicateTask('${task.id}')">Duplicate</button><button class="small-action" onclick="moveTaskToToday('${task.id}')">Move Today</button><button class="small-action danger" onclick="deleteTask('${task.id}')">Delete</button></div></div></div>`;return card}function optionHTML(options,selected){return options.map(o=>`<option value="${escapeHTML(o)}" ${o===selected?"selected":""}>${escapeHTML(o)}</option>`).join("")}function colorOptionHTML(selected){return colors.map(c=>`<option value="${c}" ${c===selected?"selected":""}>${escapeHTML(appSettings.colorLabels[c]||c)}</option>`).join("")}function attachDragAndSwipe(){document.querySelectorAll(".task-card").forEach(card=>{card.addEventListener("dragstart",e=>{draggedId=card.dataset.id;card.classList.add("dragging");e.dataTransfer.effectAllowed="move"});card.addEventListener("dragend",()=>{card.classList.remove("dragging");draggedId=null});card.addEventListener("dragover",e=>{e.preventDefault();const overId=card.dataset.id;if(!draggedId||draggedId===overId)return;reorderByIds(draggedId,overId);render();saveOrderToSheet()});setupSwipe(card)})}function setupSwipe(card){let startX=0,startY=0,pressTimer=null;card.addEventListener("touchstart",e=>{if(!e.touches[0])return;startX=e.touches[0].clientX;startY=e.touches[0].clientY;pressTimer=setTimeout(()=>card.classList.add("dragging"),500)},{passive:true});card.addEventListener("touchmove",e=>{if(!e.touches[0])return;const dx=e.touches[0].clientX-startX;const dy=e.touches[0].clientY-startY;if(Math.abs(dx)>10||Math.abs(dy)>10)clearTimeout(pressTimer);if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>18){card.style.transform=`translateX(${Math.max(-95,Math.min(95,dx))}px)`}},{passive:true});card.addEventListener("touchend",e=>{clearTimeout(pressTimer);const dx=(e.changedTouches[0]?.clientX||startX)-startX;card.classList.remove("dragging");card.style.transform="";const id=card.dataset.id;if(dx>75)toggleDone(id,true);else if(dx<-75){const task=tasks.find(t=>t.id===id);const today=toISO(new Date());if(task&&task.due<today&&!task.done)moveTaskToToday(id)}},{passive:true})}function reorderByIds(dragId,targetId){const visible=getFilteredTasks();const dragTask=tasks.find(t=>t.id===dragId);const targetIndex=visible.findIndex(t=>t.id===targetId);const dragIndex=visible.findIndex(t=>t.id===dragId);if(!dragTask||targetIndex<0||dragIndex<0)return;visible.splice(dragIndex,1);visible.splice(targetIndex,0,dragTask);visible.forEach((task,index)=>{const real=tasks.find(t=>t.id===task.id);if(real)real.sortOrder=(index+1)*1000})}function moveTaskUp(id){const list=getFilteredTasks();const i=list.findIndex(t=>t.id===id);if(i<=0)return;[list[i-1].sortOrder,list[i].sortOrder]=[list[i].sortOrder,list[i-1].sortOrder];render();saveOrderToSheet()}function moveTaskDown(id){const list=getFilteredTasks();const i=list.findIndex(t=>t.id===id);if(i<0||i>=list.length-1)return;[list[i+1].sortOrder,list[i].sortOrder]=[list[i].sortOrder,list[i+1].sortOrder];render();saveOrderToSheet()}function toggleOpen(id){openIds.has(id)?openIds.delete(id):openIds.add(id);renderTasks()}function syncAllTaskColorsByCategory(){tasks.forEach(task=>{task.color=categoryColor(task.category)})}function categoryIndex(category){const categories=appSettings.categories&&appSettings.categories.length?appSettings.categories:defaultSettings.categories;const cleanCategory=String(category||"").trim().toLowerCase();let index=categories.findIndex(item=>String(item||"").trim().toLowerCase()===cleanCategory);return index<0?0:index}const categoryPalette=["#FF0000","#D0008B","#A000A8","#6A00A8","#0057D9","#00AFC1","#008F00","#52D100","#FFF000","#FFC400","#FF9100","#FF5E00","#E60039","#C0005A","#7B00FF","#3B00D9","#006DFF","#00C8FF","#00B894","#00C853","#AEEA00","#FFD600","#FFAB00","#FF6D00","#FF1744","#F50057","#D500F9","#651FFF","#2979FF","#00E5FF","#1DE9B6","#76FF03","#C6FF00","#FFEA00","#FF9100","#FF3D00"];function categoryColor(category){return "cat"+(categoryIndex(category)%categoryPalette.length+1)}function categoryColorValue(category){return categoryPalette[categoryIndex(category)%categoryPalette.length]}function readableTextColor(hex){const c=hex.replace("#","");const r=parseInt(c.substr(0,2),16),g=parseInt(c.substr(2,2),16),b=parseInt(c.substr(4,2),16);return (r*299+g*587+b*114)/1000>168?"#111":"#fff"}function taskColorStyle(task){const bg=categoryColorValue(task.category);const fg=readableTextColor(bg);return `background:${bg};color:${fg};`}function daysDiffFromToday(iso){const today=fromISO(toISO(new Date()));const due=fromISO(iso);return Math.round((due-today)/86400000)}function daysToGoHTML(task){if(task.done)return `<span class="count-box done"><span class="count-num">✓</span><span class="count-label">DONE</span></span>`;const d=daysDiffFromToday(task.due);if(d===0)return `<span class="count-box"><span class="count-num">0</span><span class="count-label">TODAY</span></span>`;if(d>0)return `<span class="count-box"><span class="count-num">${d}</span><span class="count-label">DAYS<br>TO GO</span></span>`;return `<span class="count-box late"><span class="count-num">${Math.abs(d)}</span><span class="count-label">DAYS<br>LATE</span></span>`}function updateTaskCategory(id,category){const task=tasks.find(t=>t.id===id);if(!task)return;pushUndo("Edit category");task.category=category;task.color=categoryColor(category);task.updatedAt=new Date().toISOString();openIds.add(id);render();saveTaskToSheet(task,false)}function updateTask(id,field,value,updateSelected=false){const task=tasks.find(t=>t.id===id);if(!task)return;pushUndo("Edit task");task[field]=value;if(field==="category"){task.color=categoryColor(value)}task.updatedAt=new Date().toISOString();if(updateSelected&&field==="due"){selectedDate=value;calendarMonth=fromISO(value)}renderLight();saveTaskToSheet(task,true)}function toggleDone(id,forcedDone=null){const task=tasks.find(t=>t.id===id);if(!task)return;pushUndo("Toggle done");task.done=forcedDone===null?!task.done:Boolean(forcedDone);task.updatedAt=new Date().toISOString();render();saveTaskToSheet(task,false)}function duplicateTask(id){const task=tasks.find(t=>t.id===id);if(!task)return;pushUndo("Duplicate task");const copy={...task,id:uid(),title:task.title+" (copy)",done:false,sortOrder:Date.now(),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()};tasks.push(copy);openIds.add(copy.id);render();saveTaskToSheet(copy,false)}function moveTaskToToday(id){const task=tasks.find(t=>t.id===id);if(!task)return;pushUndo("Move today");task.due=toISO(new Date());task.updatedAt=new Date().toISOString();selectedDate=task.due;calendarMonth=new Date();render();saveTaskToSheet(task,false)}async function deleteTask(id){const task=tasks.find(t=>t.id===id);if(!task)return;if(!confirm(`Delete task "${task.title}"?`))return;pushUndo("Delete task");tasks=tasks.filter(t=>t.id!==id);openIds.delete(id);render();setSync("Deleting...","saving");try{await serverCall("deleteTask",id);setSync("Synced","")}catch(err){setSync("Delete error","error");alert("Delete gagal pada Google Drive. Cuba reload.")}}async function clearCompleted(){if(!confirm("Clear all completed tasks?"))return;pushUndo("Clear completed");tasks=tasks.filter(t=>!t.done);render();setSync("Clearing...","saving");try{await serverCall("clearCompletedTasks");setSync("Synced","")}catch(err){setSync("Clear error","error");alert("Clear done gagal.")}}function setActiveTabs(){["today","week","month","all"].forEach(v=>{document.getElementById("tab"+v.charAt(0).toUpperCase()+v.slice(1)).classList.toggle("active",view===v)})}function updateStats(){const today=toISO(new Date());document.getElementById("statTotal").textContent=tasks.length;document.getElementById("statDone").textContent=tasks.filter(t=>t.done).length;document.getElementById("statToday").textContent=tasks.filter(t=>t.due===today&&!t.done).length;document.getElementById("statOVERDUE").textContent=tasks.filter(t=>t.due<today&&!t.done).length}function renderLight(){renderDateStrip();renderCalendarScroller();renderWebCalendar();updateStats()}function render(){document.getElementById("appTitle").textContent="MyTaSK";renderDateStrip();renderCalendarScroller();renderTasks();renderWebCalendar();setActiveTabs();updateStats();updateUndoButtons();setTimeout(applyDesignerSettings,0)}function focusInput(){document.getElementById("quickTaskTitle").focus()}function openSettings(){document.getElementById("settingsCategories").value=appSettings.categories.join("\n");document.getElementById("settingsModal").classList.add("open")}function closeSettings(){document.getElementById("settingsModal").classList.remove("open")}function readLines(id,fallback){const list=document.getElementById(id).value.split("\n").map(x=>x.trim()).filter(Boolean);return list.length?[...new Set(list)]:fallback}async function saveSettingsFromModal(){const newSettings={appName:"MyTaSK",categories:readLines("settingsCategories",defaultSettings.categories),colorLabels:{},uiDesigner:appSettings.uiDesigner||defaultUIDesigner};pushUndo("Settings");appSettings=normalizeSettings(newSettings);syncAllTaskColorsByCategory();renderDropdownSettings();render();closeSettings();try{setSync("Saving settings...","saving");appSettings=normalizeSettings(await serverCall("saveSettings",appSettings));syncAllTaskColorsByCategory();setSync("Synced","")}catch(err){setSync("Settings save error","error");alert("Settings gagal disimpan ke Google Drive.")}}function resetDefaultSettings(){appSettings=JSON.parse(JSON.stringify(defaultSettings));openSettings()}function exportData(){const data={app:"MyTaSK",version:"Google Drive v4.5",exportedAt:new Date().toISOString(),settings:appSettings,tasks};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=`mytask-backup-${toISO(new Date())}.json`;a.click();URL.revokeObjectURL(url)}function importData(event){
+  const file=event.target.files[0];
+  if(!file)return;
+
+  if(!isSignedIn || !accessToken || !driveFileId){
+    alert("Sila login Google dahulu sebelum import backup.");
+    event.target.value="";
+    return;
+  }
+
+  const reader=new FileReader();
+  reader.onload=async e=>{
+    try{
+      const data=JSON.parse(e.target.result);
+
+      const importedTasks = Array.isArray(data) ? data : (Array.isArray(data.tasks) ? data.tasks : null);
+      if(!Array.isArray(importedTasks)) throw new Error("Invalid import data: tasks array not found");
+
+      const hasSettings = data && data.settings && typeof data.settings === "object";
+      const msg = hasSettings
+        ? "Import backup lama dan merge dengan data Google Drive sekarang? Settings/category daripada backup juga akan dimasukkan."
+        : "Import backup lama dan merge dengan data Google Drive sekarang?";
+
+      if(!confirm(msg))return;
+
+      setSync("Importing...","saving");
+
+      const existingIds = new Set(tasks.map(t=>t.id));
+      const normalizedImported = importedTasks.map(item=>{
+        const t = normalizeTask(item);
+        if(existingIds.has(t.id)){
+          t.id = uid();
+          t.createdAt = new Date().toISOString();
+        }
+        t.updatedAt = new Date().toISOString();
+        existingIds.add(t.id);
+        return t;
+      });
+
+      pushUndo("Import backup");
+      tasks = tasks.concat(normalizedImported);
+
+      if(hasSettings){
+        appSettings = normalizeSettings(data.settings);
+        renderDropdownSettings();
+      }
+
+      syncAllTaskColorsByCategory();
+
+      await uploadDriveDatabase({
+        version: "mytask-vercel-edition-v1.7.3",
+        updatedAt: new Date().toISOString(),
+        settings: appSettings,
+        tasks: tasks
+      });
+
+      setSync("Synced","");
+      render();
+      alert("Backup berjaya diimport ke Google Drive.");
+    }catch(err){
+      console.error(err);
+      setSync("Import error","error");
+      alert("Import failed. Fail JSON tidak valid atau format backup tidak dikenali.");
+    }
+  };
+  reader.readAsText(file);
+  event.target.value="";
+}function openWebTaskDetail(id){const task=tasks.find(t=>t.id===id);if(!task)return;const modal=document.getElementById("webTaskModal");const body=document.getElementById("webTaskDetailBody");if(!modal||!body)return;body.innerHTML=`<div class="web-detail-grid"><div class="web-detail-field full"><label>Task Name</label><input value="${escapeHTML(task.title)}" oninput="updateTask('${task.id}','title',this.value);refreshWebTaskDetail('${task.id}')"/></div><div class="web-detail-field"><label>Due Date</label><input type="date" value="${escapeHTML(task.due)}" onchange="updateTask('${task.id}','due',this.value,true);refreshWebTaskDetail('${task.id}')"/></div><div class="web-detail-field"><label>Category</label><select onchange="updateTaskCategory('${task.id}',this.value);refreshWebTaskDetail('${task.id}')">${optionHTML(appSettings.categories,task.category||appSettings.categories[0])}</select></div><div class="web-detail-field full"><label>Detail / Notes</label><textarea placeholder="Add details, checklist, link or follow-up note..." oninput="updateTask('${task.id}','note',this.value);refreshWebTaskDetail('${task.id}')">${escapeHTML(task.note||"")}</textarea></div></div><div class="web-detail-actions"><button class="primary" onclick="toggleDone('${task.id}',${!task.done});refreshWebTaskDetail('${task.id}')">${task.done?"Undo Completed":"Mark Completed"}</button><button onclick="moveTaskToToday('${task.id}');refreshWebTaskDetail('${task.id}')">Move Today</button><button onclick="duplicateTask('${task.id}');closeWebTaskDetail()">Duplicate</button><button class="danger" onclick="deleteTask('${task.id}');closeWebTaskDetail()">Delete</button></div>`;modal.classList.add("open")}function refreshWebTaskDetail(id){setTimeout(()=>{const modal=document.getElementById("webTaskModal");if(modal&&modal.classList.contains("open"))openWebTaskDetail(id)},80)}function closeWebTaskDetail(){const modal=document.getElementById("webTaskModal");if(modal)modal.classList.remove("open")}function renderWebDropdowns(){const a=document.getElementById("webDefaultCategory");if(a){a.innerHTML=appSettings.categories.map(c=>`<option>${escapeHTML(c)}</option>`).join("")}}function renderWebCalendar(){renderWebDropdowns();const content=document.getElementById("webCalendarContent");if(!content)return;if(isSignedIn){const auth=document.getElementById("webAuthBox");if(auth)auth.style.display="none";content.style.display="block"}const title=document.getElementById("webCalendarTitle");const grid=document.getElementById("webCalendarGrid");if(!title||!grid)return;title.textContent=`${monthNames[calendarMonth.getMonth()]} ${calendarMonth.getFullYear()}`;grid.innerHTML="";calendarDayNames.forEach(day=>{const div=document.createElement("div");div.className="web-day-name";div.textContent=day.toUpperCase();grid.appendChild(div)});const y=calendarMonth.getFullYear();const m=calendarMonth.getMonth();const first=new Date(y,m,1);const start=new Date(first);const mondayOffset=(first.getDay()+6)%7;start.setDate(start.getDate()-mondayOffset);const today=toISO(new Date());for(let i=0;i<42;i++){const d=new Date(start);d.setDate(start.getDate()+i);const iso=toISO(d);const cell=document.createElement("div");cell.className="web-day-cell";if(d.getMonth()!==m)cell.classList.add("other");if(iso===today)cell.classList.add("today");if(iso===selectedDate)cell.classList.add("selected");cell.onclick=()=>{selectedDate=iso;calendarMonth=fromISO(iso);view="today";render()};const dayTasks=tasks.filter(t=>t.due===iso).sort((a,b)=>{if(a.done!==b.done)return a.done?1:-1;return Number(a.sortOrder||0)-Number(b.sortOrder||0)});cell.innerHTML=`<div class="web-day-num"><span>${d.getDate()}</span><span>${dayTasks.length?dayTasks.length:""}</span></div><div class="web-task-list"></div>`;const list=cell.querySelector(".web-task-list");dayTasks.slice(0,5).forEach(task=>{const chip=document.createElement("button");chip.className=`web-task-chip ${task.done?"done":""}`;chip.setAttribute("style",taskColorStyle(task));chip.onclick=(ev)=>{ev.stopPropagation();openWebTaskDetail(task.id)};chip.innerHTML=`<span class="web-task-date">${fromISO(task.due).getDate()}</span><span>${escapeHTML(task.title)}</span><span class="web-count">${task.done?"DONE":daysDiffFromToday(task.due)+"D"}</span>`;list.appendChild(chip)});if(dayTasks.length>5){const more=document.createElement("div");more.className="web-more";more.textContent=`+${dayTasks.length-5} more`;list.appendChild(more)}grid.appendChild(cell)}renderWebSelectedTasks()}function renderWebSelectedTasks(){const title=document.getElementById("webSelectedTitle");const wrap=document.getElementById("webSelectedTasks");if(!title||!wrap)return;title.textContent=prettyDate(selectedDate).toUpperCase();const list=tasks.filter(t=>t.due===selectedDate).sort((a,b)=>Number(a.sortOrder||0)-Number(b.sortOrder||0));wrap.innerHTML="";if(!list.length){wrap.innerHTML=`<div class="empty">No task on this date.</div>`;return}list.forEach(task=>{const card=document.createElement("div");card.className="web-selected-card";card.innerHTML=`<strong>${escapeHTML(task.title)}</strong><small>${task.done?"COMPLETED":taskLabel(task)} • ${escapeHTML(task.category||"General")}</small><div class="web-selected-actions"><button onclick="toggleDone('${task.id}',${!task.done})">${task.done?"Undo":"Done"}</button><button onclick="openWebTaskDetail('${task.id}')">Open Detail</button><button onclick="moveTaskToToday('${task.id}')">Move Today</button></div>`;wrap.appendChild(card)})}function moveWebMonth(delta){calendarMonth.setMonth(calendarMonth.getMonth()+delta);render()}function addWebTask(){const input=document.getElementById("webQuickTaskTitle");if(!input)return;const title=input.value.trim();if(!title)return;const selectedCategory=document.getElementById("webDefaultCategory")?.value||appSettings.categories[0]||"General";pushUndo("Add task");const task={id:uid(),title,due:selectedDate,time:"",category:selectedCategory,note:"",done:false,color:categoryColor(selectedCategory),sortOrder:Date.now(),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()};tasks.push(task);input.value="";openIds.add(task.id);render();saveTaskToSheet(task,false)}
+
+let chatGPTImportedTasks=[];
+
+function openChatGPTImport(){
+  const m=document.getElementById("chatGPTImportModal");
+  if(m)m.classList.add("open");
+}
+function closeChatGPTImport(){
+  const m=document.getElementById("chatGPTImportModal");
+  if(m)m.classList.remove("open");
+}
+function setChatGPTImportStatus(text){
+  const e=document.getElementById("chatGPTImportStatus");
+  if(e)e.textContent=text;
+}
+async function pasteChatGPTClipboard(){
+  try{
+    const text=await navigator.clipboard.readText();
+    document.getElementById("chatGPTImportText").value=text;
+    previewChatGPTImport();
+    setChatGPTImportStatus("Clipboard pasted. Semak preview sebelum apply.");
+  }catch(err){
+    console.error(err);
+    alert("Browser tidak benarkan clipboard. Paste manual guna Ctrl+V.");
+  }
+}
+function extractJSONFromText(text){
+  const raw=String(text||"").trim();
+  if(!raw)throw new Error("Tiada JSON untuk diimport.");
+  try{return JSON.parse(raw)}catch(e){}
+  const fenced=raw.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if(fenced&&fenced[1])return JSON.parse(fenced[1].trim());
+  const firstObj=raw.indexOf("{"), lastObj=raw.lastIndexOf("}");
+  if(firstObj>=0&&lastObj>firstObj){
+    try{return JSON.parse(raw.slice(firstObj,lastObj+1))}catch(e){}
+  }
+  const firstArr=raw.indexOf("["), lastArr=raw.lastIndexOf("]");
+  if(firstArr>=0&&lastArr>firstArr){
+    try{return JSON.parse(raw.slice(firstArr,lastArr+1))}catch(e){}
+  }
+  throw new Error("Format JSON tidak dapat dibaca.");
+}
+function normalizeImportedChatGPTTask(item,index=0){
+  const category=item.category||item.kategori||appSettings.categories[0]||"General";
+  const due=item.due||item.dueDate||item.date||item.tarikh||selectedDate;
+  return normalizeTask({
+    id:uid(),
+    title:item.title||item.task||item.name||item.tugasan||"Untitled Task",
+    due:/^\d{4}-\d{2}-\d{2}$/.test(String(due))?due:selectedDate,
+    category:appSettings.categories.includes(category)?category:(category||appSettings.categories[0]||"General"),
+    note:item.note||item.notes||item.catatan||item.reason||item.priority?`Priority: ${item.priority||"Medium"}${item.note?` • ${item.note}`:""}`:"",
+    done:false,
+    color:categoryColor(category),
+    sortOrder:Date.now()+index,
+    createdAt:new Date().toISOString(),
+    updatedAt:new Date().toISOString()
+  });
+}
+function parseChatGPTImport(){
+  const text=document.getElementById("chatGPTImportText")?.value||"";
+  const data=extractJSONFromText(text);
+  let list=[];
+  if(Array.isArray(data))list=data;
+  else if(Array.isArray(data.tasks))list=data.tasks;
+  else if(Array.isArray(data.plan))list=data.plan;
+  else if(data.title||data.task||data.tugasan)list=[data];
+  else throw new Error("JSON dibaca, tapi tiada array tasks.");
+  if(!list.length)throw new Error("Tiada task dalam JSON.");
+  return list.map(normalizeImportedChatGPTTask);
+}
+function renderChatGPTImportPreview(){
+  const el=document.getElementById("chatGPTImportPreview");
+  if(!el)return;
+  el.innerHTML=chatGPTImportedTasks.length?chatGPTImportedTasks.map((t,i)=>`<div class="ai-plan-item"><strong>${i+1}. ${escapeHTML(t.title)}</strong><small>Due: ${escapeHTML(t.due)} • Category: ${escapeHTML(t.category)}${t.note?`<br>Note: ${escapeHTML(t.note)}`:""}</small></div>`).join(""):`<div class="empty">Belum ada preview import.</div>`;
+}
+function previewChatGPTImport(){
+  try{
+    chatGPTImportedTasks=parseChatGPTImport();
+    renderChatGPTImportPreview();
+    setChatGPTImportStatus(`${chatGPTImportedTasks.length} task dikesan. Klik Apply to Calendar untuk masukkan.`);
+  }catch(err){
+    console.error(err);
+    chatGPTImportedTasks=[];
+    renderChatGPTImportPreview();
+    setChatGPTImportStatus("Error: "+err.message);
+  }
+}
+async function applyChatGPTImport(){
+  try{
+    if(!chatGPTImportedTasks.length)chatGPTImportedTasks=parseChatGPTImport();
+    if(!chatGPTImportedTasks.length){alert("Tiada task untuk apply.");return}
+    if(!confirm(`Apply ${chatGPTImportedTasks.length} task dari ChatGPT ke Calendar?`))return;
+    pushUndo("ChatGPT import");
+    tasks=tasks.concat(chatGPTImportedTasks.map((t,i)=>normalizeTask({...t,id:uid(),sortOrder:Date.now()+i,updatedAt:new Date().toISOString()})));
+    syncAllTaskColorsByCategory();
+    render();
+    setChatGPTImportStatus("Imported. Saving to Google Drive...");
+    if(isSignedIn&&driveFileId){
+      await uploadDriveDatabase({version:"mytask-vercel-edition-v1.7",updatedAt:new Date().toISOString(),settings:appSettings,tasks});
+      setSync("Synced","");
+      setChatGPTImportStatus("Import saved to Google Drive.");
+    }else{
+      setChatGPTImportStatus("Imported locally. Login Google untuk sync.");
+    }
+    chatGPTImportedTasks=[];
+    renderChatGPTImportPreview();
+  }catch(err){
+    console.error(err);
+    setChatGPTImportStatus("Import failed: "+err.message);
+    alert("Import failed: "+err.message);
+  }
+}
+function clearChatGPTImport(){
+  const t=document.getElementById("chatGPTImportText");if(t)t.value="";
+  chatGPTImportedTasks=[];
+  renderChatGPTImportPreview();
+  setChatGPTImportStatus("Cleared.");
+}
+
+let aiPlannedTasks=[];
+function openAIPlanner(){const m=document.getElementById("aiPlannerModal");if(m)m.classList.add("open")}
+function closeAIPlanner(){const m=document.getElementById("aiPlannerModal");if(m)m.classList.remove("open")}
+function getAIInstruction(isMobile=false){const m=document.getElementById("aiInstructionMobile");const d=document.getElementById("aiInstruction");return ((isMobile&&m?m.value:d?d.value:"")||"").trim()}
+function setAIStatus(text){["aiPlanStatus","aiPlanStatusMobile"].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=text})}
+function renderAIPlanPreview(){const list=aiPlannedTasks.length?aiPlannedTasks.map((t,i)=>`<div class="ai-plan-item"><strong>${i+1}. ${escapeHTML(t.title||"Untitled Task")}</strong><small>Due: ${escapeHTML(t.due||selectedDate)} • Category: ${escapeHTML(t.category||"General")} • Priority: ${escapeHTML(t.priority||"Medium")}${t.note?"<br>Note: "+escapeHTML(t.note):""}</small></div>`).join(""):`<div class="empty">Belum ada preview AI.</div>`;["aiPlanPreview","aiPlanPreviewMobile"].forEach(id=>{const e=document.getElementById(id);if(e)e.innerHTML=list})}
+async function generateAIPlan(isMobile=false){
+  const instruction=getAIInstruction(isMobile); if(!instruction){alert("Taip arahan kerja dahulu.");return}
+  setAIStatus("AI sedang susun plan...");
+  try{
+    const res=await fetch("/api/ai-plan-task",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({instruction,currentDate:toISO(new Date()),selectedDate,categories:appSettings.categories||[],existingTasks:tasks.slice(0,120).map(t=>({title:t.title,due:t.due,category:t.category,done:t.done,note:t.note||""}))})});
+    const data=await res.json(); if(!res.ok)throw new Error(data.error||"AI planner request failed.");
+    aiPlannedTasks=(data.tasks||[]).map(item=>({id:uid(),title:String(item.title||"Untitled Task").trim(),due:item.due||selectedDate,category:appSettings.categories.includes(item.category)?item.category:(item.category||appSettings.categories[0]||"General"),note:item.note||item.reason||"",priority:item.priority||"Medium",done:false,color:categoryColor(item.category||appSettings.categories[0]||"General"),sortOrder:Date.now()+Math.floor(Math.random()*10000),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()}));
+    renderAIPlanPreview(); setAIStatus(data.mode==="fallback"?"Fallback planner generated. Set OPENAI_API_KEY for real AI.":"AI plan generated. Review before apply.");
+  }catch(err){console.error(err);setAIStatus("AI planner error.");alert("AI Planner gagal: "+err.message)}
+}
+async function applyAIPlan(){
+  if(!aiPlannedTasks.length){alert("Generate plan dahulu sebelum Apply.");return}
+  if(!confirm("Apply semua AI planned task ke calendar MyTaSK?"))return;
+  pushUndo("AI Planner apply");
+  const now=Date.now(); const newTasks=aiPlannedTasks.map((t,i)=>normalizeTask({...t,id:uid(),sortOrder:now+i,color:categoryColor(t.category),createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()}));
+  tasks=tasks.concat(newTasks);syncAllTaskColorsByCategory();aiPlannedTasks=[];renderAIPlanPreview();render();setAIStatus("AI tasks applied and saving...");
+  try{if(isSignedIn&&driveFileId){await uploadDriveDatabase({version:"mytask-vercel-edition-v1.7",updatedAt:new Date().toISOString(),settings:appSettings,tasks});setSync("Synced","");setAIStatus("AI tasks saved to Google Drive.")}else setAIStatus("Tasks applied locally. Login Google untuk sync.")}
+  catch(err){console.error(err);setAIStatus("Apply success, but save error.");setSync("AI save error","error")}
+}
+function clearAIPlan(){aiPlannedTasks=[];renderAIPlanPreview();setAIStatus("AI Planner cleared.")}
+
+window.addEventListener("load",()=>{updateClock();setInterval(updateClock,30000);renderDropdownSettings();render();updateUndoButtons();applyDesignerSettings();setTimeout(attemptSilentLogin,900)});
+</script></body></html>
