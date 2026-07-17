@@ -103,3 +103,10 @@ Nota:
 - Kekal Google Drive sync, Undo, auto reconnect login dan import JSON.
 - Tambah App Designer untuk hide/show dan tukar label button/card.
 - Tiada folder `api`, jadi tidak akan keluar error `export default async function...` sebagai homepage.
+
+## v1.7.1 Category Save Fixed
+
+- Fixed Category Dropdown tidak save.
+- Category baru terus update Default Category dan Filter Category.
+- Tetapan Designer tidak hilang bila save Category.
+- Settings disimpan terus ke Google Drive JSON database.
