@@ -110,3 +110,17 @@ Nota:
 - Category baru terus update Default Category dan Filter Category.
 - Tetapan Designer tidak hilang bila save Category.
 - Settings disimpan terus ke Google Drive JSON database.
+
+
+## MyTaSK Cyberpunk v1.8
+
+Tambahan baharu:
+- Button Designer dialihkan ke dalam Settings.
+- Tambah button Today di sebelah button Settings pada mobile view.
+- Overdue kini turut dipamerkan dalam Week view.
+- Task yang completed tidak lagi auto dipamerkan; ia dipaparkan dalam seksyen `TASK DONE` yang boleh dibuka/tutup.
+- Tambah efek celebration neon/cyberpunk bila task ditandakan selesai.
+- Semua font ditukar kepada Century Gothic fallback.
+- Nombor tarikh pada kalender dibesarkan untuk paparan lebih professional.
+- Tema diolah ikut warna gambar rujukan ungu-magenta-jingga.
+- Gambar branding pengguna ditambah pada tajuk / hero paparan.
