@@ -124,3 +124,12 @@ Tambahan baharu:
 - Nombor tarikh pada kalender dibesarkan untuk paparan lebih professional.
 - Tema diolah ikut warna gambar rujukan ungu-magenta-jingga.
 - Gambar branding pengguna ditambah pada tajuk / hero paparan.
+
+
+## MyTaSK Cyberpunk v1.8.1
+
+Pembetulan:
+- `TASK DONE` dalam Today view hanya tunjuk task siap pada tarikh dipilih.
+- `TASK DONE` dalam Week view hanya tunjuk task siap dalam julat minggu / week view.
+- `TASK DONE` dalam Month view hanya tunjuk task siap dalam bulan semasa.
+- `TASK DONE` dalam All view sahaja tunjuk semua task siap.
