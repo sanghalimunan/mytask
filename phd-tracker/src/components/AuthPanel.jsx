@@ -7,12 +7,14 @@ const SYNC_LABELS = {
   error: 'Ralat menyimpan',
 }
 
-export default function AuthPanel({ auth, sync, onSignIn, onSignOut }) {
+export default function AuthPanel({ auth, sync, onSignIn, onSignOut, onOpenSettings }) {
   if (!isGoogleConfigured()) {
     return (
-      <div className="rounded-lg border border-maroon-900/50 bg-maroon-950/30 px-3 py-2 text-xs text-neutral-400">
-        Mod tetamu (data tempatan). Tetapkan <code className="text-maroon-300">VITE_GOOGLE_CLIENT_ID</code>{' '}
-        dalam <code className="text-maroon-300">.env</code> untuk aktifkan login &amp; sync Google Drive.
+      <div className="flex items-center gap-2 rounded-lg border border-maroon-900/50 bg-maroon-950/30 px-3 py-2 text-xs text-neutral-400">
+        <span>Mod tetamu (data tempatan). Google belum disambung.</span>
+        <button onClick={onOpenSettings} className="font-medium text-maroon-300 hover:text-maroon-200">
+          Buka Settings →
+        </button>
       </div>
     )
   }

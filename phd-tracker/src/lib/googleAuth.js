@@ -6,12 +6,30 @@ const SCOPES = [
 ].join(' ')
 
 const SESSION_KEY = 'phd-tracker:gtoken'
+const CLIENT_ID_KEY = 'phd-tracker:google-client-id'
 
 let gisLoadPromise = null
 let tokenClient = null
 
+// Client ID lives in this browser's localStorage (set via the in-app Settings
+// panel), not baked into the built HTML/JS. Falls back to a build-time env
+// var only for local dev convenience.
+export function getStoredClientId() {
+  return localStorage.getItem(CLIENT_ID_KEY) || ''
+}
+
+export function setStoredClientId(clientId) {
+  const trimmed = clientId.trim()
+  if (trimmed) {
+    localStorage.setItem(CLIENT_ID_KEY, trimmed)
+  } else {
+    localStorage.removeItem(CLIENT_ID_KEY)
+  }
+  tokenClient = null // force re-init with the new client id
+}
+
 export function getClientId() {
-  return import.meta.env.VITE_GOOGLE_CLIENT_ID || ''
+  return getStoredClientId() || import.meta.env.VITE_GOOGLE_CLIENT_ID || ''
 }
 
 export function isGoogleConfigured() {
@@ -72,9 +90,7 @@ async function ensureTokenClient() {
   await loadGisScript()
   const clientId = getClientId()
   if (!clientId) {
-    throw new Error(
-      'VITE_GOOGLE_CLIENT_ID belum ditetapkan. Rujuk .env.example untuk setup Google OAuth.',
-    )
+    throw new Error('Google Client ID belum ditetapkan. Buka Settings untuk masukkannya.')
   }
   if (!tokenClient) {
     tokenClient = window.google.accounts.oauth2.initTokenClient({

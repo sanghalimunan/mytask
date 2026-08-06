@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { usePhdData } from './hooks/usePhdData.js'
 import AuthPanel from './components/AuthPanel.jsx'
+import SettingsPanel from './components/SettingsPanel.jsx'
 import DaysRemainingCards from './components/DaysRemainingCards.jsx'
 import TimelineChart from './components/TimelineChart.jsx'
 import ChapterProgress from './components/ChapterProgress.jsx'
@@ -13,8 +15,21 @@ import FOWFODLog from './components/FOWFODLog.jsx'
 import SVConsultationLog from './components/SVConsultationLog.jsx'
 
 export default function App() {
-  const { data, timeline, addTDR, addTM168, addFOWFOD, addSVConsultation, auth, sync, signIn, signOut } =
-    usePhdData()
+  const {
+    data,
+    timeline,
+    addTDR,
+    addTM168,
+    addFOWFOD,
+    addSVConsultation,
+    updateReminders,
+    auth,
+    sync,
+    signIn,
+    signOut,
+  } = usePhdData()
+
+  const [showSettings, setShowSettings] = useState(false)
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-950 to-maroon-900/10 pb-16">
@@ -26,9 +41,34 @@ export default function App() {
               {data.profile.name} • Mula {data.profile.programStart} • Target {data.profile.targetMonths} bulan
             </p>
           </div>
-          <AuthPanel auth={auth} sync={sync} onSignIn={signIn} onSignOut={signOut} />
+          <div className="flex items-center gap-3">
+            <AuthPanel
+              auth={auth}
+              sync={sync}
+              onSignIn={signIn}
+              onSignOut={signOut}
+              onOpenSettings={() => setShowSettings(true)}
+            />
+            <button
+              onClick={() => setShowSettings((prev) => !prev)}
+              title="Settings"
+              className="rounded-lg border border-neutral-700 px-2.5 py-1.5 text-sm text-neutral-300 hover:bg-neutral-800"
+            >
+              ⚙
+            </button>
+          </div>
         </div>
       </header>
+
+      {showSettings && (
+        <div className="pt-6">
+          <SettingsPanel
+            reminders={data.reminders}
+            onUpdateReminders={updateReminders}
+            onClose={() => setShowSettings(false)}
+          />
+        </div>
+      )}
 
       <main className="mx-auto max-w-6xl space-y-6 px-4 py-6 sm:px-8">
         <DaysRemainingCards timeline={timeline} />

@@ -138,6 +138,10 @@ export function usePhdData() {
     setData((prev) => ({ ...prev, svConsultations: [entry, ...prev.svConsultations] }))
   }
 
+  function updateReminders(partial) {
+    setData((prev) => ({ ...prev, reminders: { ...prev.reminders, ...partial } }))
+  }
+
   return {
     data,
     timeline,
@@ -145,6 +149,7 @@ export function usePhdData() {
     addTM168,
     addFOWFOD,
     addSVConsultation,
+    updateReminders,
     auth,
     sync,
     signIn,

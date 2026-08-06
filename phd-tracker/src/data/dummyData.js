@@ -72,4 +72,10 @@ export const dummyData = {
   ],
   weeklyTarget: { period: '22-28 Jun 2026', percentComplete: 60 },
   monthlyTarget: { month: 'Jun 2026', percentComplete: 42 },
+  reminders: {
+    telegramChatId: '',
+    whatsappNumber: '',
+    dailyReminderTime: '20:00',
+    weeklyReminderDay: 'Sunday',
+  },
 }
