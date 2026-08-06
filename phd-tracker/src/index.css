@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-neutral-950 text-neutral-100;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.card {
+  @apply rounded-xl border border-maroon-900/50 bg-neutral-900/80 p-4 shadow-lg shadow-black/30;
+}
+
+.card-title {
+  @apply mb-3 text-sm font-semibold uppercase tracking-wide text-maroon-300;
+}
+
+.progress-track {
+  @apply h-2.5 w-full overflow-hidden rounded-full bg-neutral-800;
+}
+
+.progress-fill {
+  @apply h-full rounded-full bg-gradient-to-r from-maroon-600 to-maroon-400 transition-all duration-500;
+}
+
+.btn-primary {
+  @apply rounded-lg bg-maroon-600 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-maroon-500 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.input {
+  @apply w-full rounded-lg border border-neutral-700 bg-neutral-800 px-3 py-1.5 text-sm text-neutral-100 placeholder-neutral-500 outline-none focus:border-maroon-500;
+}
