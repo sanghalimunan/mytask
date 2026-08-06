@@ -1,4 +1,5 @@
 import { usePhdData } from './hooks/usePhdData.js'
+import AuthPanel from './components/AuthPanel.jsx'
 import DaysRemainingCards from './components/DaysRemainingCards.jsx'
 import TimelineChart from './components/TimelineChart.jsx'
 import ChapterProgress from './components/ChapterProgress.jsx'
@@ -12,15 +13,21 @@ import FOWFODLog from './components/FOWFODLog.jsx'
 import SVConsultationLog from './components/SVConsultationLog.jsx'
 
 export default function App() {
-  const { data, timeline, addTDR, addTM168, addFOWFOD, addSVConsultation } = usePhdData()
+  const { data, timeline, addTDR, addTM168, addFOWFOD, addSVConsultation, auth, sync, signIn, signOut } =
+    usePhdData()
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-neutral-950 via-neutral-950 to-maroon-900/10 pb-16">
       <header className="border-b border-maroon-900/40 bg-neutral-950/80 px-4 py-5 backdrop-blur sm:px-8">
-        <h1 className="text-xl font-bold text-maroon-300 sm:text-2xl">PhD Tracker — StrategiSK</h1>
-        <p className="text-sm text-neutral-400">
-          {data.profile.name} • Mula {data.profile.programStart} • Target {data.profile.targetMonths} bulan
-        </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h1 className="text-xl font-bold text-maroon-300 sm:text-2xl">PhD Tracker — StrategiSK</h1>
+            <p className="text-sm text-neutral-400">
+              {data.profile.name} • Mula {data.profile.programStart} • Target {data.profile.targetMonths} bulan
+            </p>
+          </div>
+          <AuthPanel auth={auth} sync={sync} onSignIn={signIn} onSignOut={signOut} />
+        </div>
       </header>
 
       <main className="mx-auto max-w-6xl space-y-6 px-4 py-6 sm:px-8">
