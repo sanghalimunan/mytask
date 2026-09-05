@@ -133,3 +133,13 @@ Pembetulan:
 - `TASK DONE` dalam Week view hanya tunjuk task siap dalam julat minggu / week view.
 - `TASK DONE` dalam Month view hanya tunjuk task siap dalam bulan semasa.
 - `TASK DONE` dalam All view sahaja tunjuk semua task siap.
+
+
+## MyTaSK Cyberpunk v1.8.2
+
+Penambahbaikan:
+- Teks hero ditukar kepada `SK Task Planning`.
+- Auto reconnect dipercepatkan semasa load jika pernah login sebelum ini.
+- Simpan `last signed-in email` untuk pengalaman reconnect lebih jelas.
+- Kalendar mobile akan auto-hide bila pengguna mula edit `Task Name`, `Due Date`, `Category`, `Detail / Notes`, atau quick task input.
+- UX login dipermudah selepas login pertama, tetapi consent / verifikasi pertama Google masih bergantung kepada polisi OAuth Google.
