@@ -135,20 +135,10 @@ Pembetulan:
 - `TASK DONE` dalam All view sahaja tunjuk semua task siap.
 
 
-## MyTaSK Cyberpunk v1.8.2
-
-Penambahbaikan:
-- Teks hero ditukar kepada `SK Task Planning`.
-- Auto reconnect dipercepatkan semasa load jika pernah login sebelum ini.
-- Simpan `last signed-in email` untuk pengalaman reconnect lebih jelas.
-- Kalendar mobile akan auto-hide bila pengguna mula edit `Task Name`, `Due Date`, `Category`, `Detail / Notes`, atau quick task input.
-- UX login dipermudah selepas login pertama, tetapi consent / verifikasi pertama Google masih bergantung kepada polisi OAuth Google.
-
-
-## MyTaSK Cyberpunk v1.8.4
+## MyTaSK Cyberpunk v1.8.5 Restore Sign In
 
 Fix:
-- Button Sign in dipulihkan kepada direct `loginWithGoogle()`.
-- Auto reconnect tidak lagi block / disable button.
-- Web auth sign-in dan mobile auth sign-in guna fungsi login yang sama.
-- Login function kini tunggu Google library ready sebelum buka popup.
+- Login button dipulihkan kepada flow asal yang lebih stabil.
+- Buang perubahan manual/autologin agresif yang boleh block popup Google.
+- Kekal `SK Task Planning`.
+- Kekal auto-hide calendar bila edit task di phone.
