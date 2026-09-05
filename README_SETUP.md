@@ -144,7 +144,11 @@ Penambahbaikan:
 - Kalendar mobile akan auto-hide bila pengguna mula edit `Task Name`, `Due Date`, `Category`, `Detail / Notes`, atau quick task input.
 - UX login dipermudah selepas login pertama, tetapi consent / verifikasi pertama Google masih bergantung kepada polisi OAuth Google.
 
-## MyTaSK Cyberpunk v1.8.3
-- Fix button Sign in yang nampak tidak hidup semasa auto reconnect.
-- Auto reconnect diberi timeout 4.5 saat.
-- Manual sign in boleh override auto reconnect.
+
+## MyTaSK Cyberpunk v1.8.4
+
+Fix:
+- Button Sign in dipulihkan kepada direct `loginWithGoogle()`.
+- Auto reconnect tidak lagi block / disable button.
+- Web auth sign-in dan mobile auth sign-in guna fungsi login yang sama.
+- Login function kini tunggu Google library ready sebelum buka popup.
