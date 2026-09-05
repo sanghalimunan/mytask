@@ -142,3 +142,13 @@ Fix:
 - Buang perubahan manual/autologin agresif yang boleh block popup Google.
 - Kekal `SK Task Planning`.
 - Kekal auto-hide calendar bila edit task di phone.
+
+
+## MyTaSK Cyberpunk v1.8.6 Device Session
+
+Tambahan:
+- Simpan salinan settings dan tasks dalam browser device selepas login pertama.
+- Bila buka semula pada phone/device sama, app terus masuk paparan utama tanpa tunggu Google login.
+- Jika Google token sudah tamat, perubahan disimpan dulu di device.
+- Button `Reconnect` ditambah untuk sync semula ke Google Drive bila perlu.
+- Bila reconnect berjaya, data local terbaru akan cuba dihantar balik ke Google Drive.
